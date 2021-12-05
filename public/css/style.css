@@ -1,0 +1,418 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Montserrat:wght@400;600&display=swap');
+
+/*
+ style untuk font
+*/
+
+h1{
+    font-family: 'Heebo' !important;
+    font-weight: 500 !important;
+    color: #122D74 !important;
+    font-size: 38px !important;
+    line-height: 150% !important;
+}
+
+h2{
+    font-family: 'Heebo' !important;
+    font-weight: 500 !important;
+    color: #122D74 !important;
+    font-size: 38px !important;
+    line-height: 150% !important;
+}
+
+h3{
+    font-family: 'Montserrat' !important; 
+    font-weight: bold !important; 
+    color: #122D74 !important;
+    font-size: 18px !important;
+}
+
+h4{
+    font-family: 'Heebo' !important;
+    font-weight: 500 !important;
+    color: #122D74 !important;
+    font-size: 18px !important;
+    line-height: 150% !important;
+}
+
+p{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    color: #3E3E3E;
+    font-size: 14px;
+    line-height: 200%;
+}
+
+a{
+    color:#3E3E3E !important;
+    font-family: 'Montserrat';
+    font-size: 14px;
+}
+
+/* 
+ style untuk font sampai sini
+*/
+
+
+.hero, .kriteria, .daftar-rs, .kontak{
+    background-color: #F9F9F9;
+}
+
+.background-kriteria{
+    background-image: url(../images/background-kriteria.png);
+    background-size:cover;
+    border-radius: 10px;
+}
+
+.tentang-image{
+    box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.25);
+    width: 50%;
+    border-radius: 10px;
+}
+
+.tentang-image img{
+     padding: 80px 80px;
+     margin-left: 40px;
+}
+
+.background-tertarik{
+    background-color: #4DEEB8;
+    border-radius: 10px;
+    height: 50%;
+}
+
+/* 
+ style untuk button
+*/
+
+.primary-btn{
+    color: white;
+    background-color: #122D74;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border-color:transparent;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.primary-btn:hover{
+    background-color: #0F2254;
+    transition: ease-in-out;
+}
+
+.outline-primary-btn{
+    color: #122D74;
+    border: 1px solid #122D74;
+    padding: 10px 25px;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.outline-primary-btn:hover{
+    color: white;
+    background-color: #122D74;
+    transition: ease-in-out;
+}
+
+.primary-btn-green{
+    color: #066F4B;
+    padding: 10px 25px;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    border-color: transparent;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.primary-btn-green:hover{
+    color: white;
+    background-color: #066F4B;
+}
+
+.primary-btn-blue{
+    color: #0e3c57;
+    padding: 10px 25px;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    border-color: transparent;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.primary-btn-blue:hover{
+    color: white;
+    background-color: #0e3c57;
+}
+
+.primary-btn-blue-light{
+    color: white;
+    padding: 10px 25px;
+    border-radius: 10px;
+    background-color: rgba(42,125,245,0.75);
+    cursor: pointer;
+    border-color: transparent;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.primary-btn-blue-light:hover{
+    background-color: #2A7DF5;
+}
+
+.icons i{
+    font-size:24px; 
+    color: #121F44; 
+    border: 1px solid #cacaca; 
+    padding:5px 10px;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    margin: 5px 10px;
+}
+
+.icons i:hover{
+    color: #ffffff; 
+    border: 1px solid #121F44; 
+    background-color: #121F44;
+}
+
+.btn-tulisan{
+    border-top-left-radius: 30px !important;
+    border-bottom-left-radius: 30px !important;
+    border: 1px solid #BDBDBD !important;
+    padding: 5px 15px !important;
+    color:#122D74;
+    font-family: 'Montserrat';
+    font-size: 12px !important;
+    font-weight: bold !important;
+    line-height: 0 !important;
+}
+
+.dropdown-action{
+    border-bottom-right-radius: 30px !important;
+    border-top-right-radius: 30px !important;
+    background-color: white;
+    border: 1px solid #BDBDBD !important;
+    padding: 5px 15px !important;
+}
+
+.rumah-sakit-upper button{
+    border-radius: 10px;
+    background-color: rgba(42,125,245,0.3);
+    padding: 5px 15px;
+    border: 0;
+    cursor: pointer;
+}
+
+.rumah-sakit-upper i{
+    font-size: 14px;
+}
+
+.rumah-sakit-upper button:hover{
+    background-color: #2A7DF5;
+}
+
+.btn-sign{
+    padding: 10px 20px;
+    border: 1px solid #3E3E3E;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.btn-sign:hover{
+    box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.25);
+}
+
+
+
+/* 
+ style untuk button sampai sini
+*/
+
+
+.nav-item{
+    font-weight: 400;
+    font-family: 'montserrat';
+}
+
+.active{
+    font-weight: 600;
+    font-family: 'montserrat';
+    color: #122D74;
+}
+
+.nav-bar{
+    list-style: none;
+    padding-left: 0;
+}
+
+
+.card:hover{
+    box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.25);
+}
+
+.gol{
+    background-color: white;
+    border: 1px solid #C4C4C4;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.gol:hover{
+    box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.25);
+}
+
+.rumah-sakit-content{
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #989898;
+}
+
+.alamat-kontak{
+    background-color: rgba(77,238,184,0.3);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.icon-alamat{
+    background-color: #4DEEB8;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 14px;
+    border-radius: 30px;
+}
+
+.email{
+    background-color: rgba(42,125,245,0.3);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.icon-email{
+    background-color: #2A7DF5;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 14px;
+    border-radius: 30px;
+}
+
+.telepon{
+    background-color: rgba(18,31,68,0.3);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.icon-telepon{
+    background-color: #121F44;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 9px 15px;
+    border-radius: 100%;
+}
+
+.form-control{
+    background-color: white !important;
+    border-radius: 10px !important;
+    padding: 10px !important;
+    border-color: #3E3E3E !important;
+}
+
+.pendonor, .donor{
+    background-color: white;
+    border: 1px solid #3E3E3E;
+    border-radius: 10px;
+    width: 70%;
+    padding: 30px;
+}
+
+.icon-pendonor{
+    background-color: #4DEEB8;
+    border-radius: 100%;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+}
+
+.icon-donor{
+    background-color: #2A7DF5;
+    border-radius: 100%;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+}
+
+.user-image img{
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+}
+
+.content-pendonor{
+    border-radius: 10px;
+    border: 1px solid #AFAFAF;
+}
+
+.gambar-table{
+    width: 2.5em;
+    height: 2.5em;
+
+}
+
+.kegiatan {
+    border-radius: 10px;
+    background-color: #EDEDED;
+    padding: 20px;
+}
+
+.action-faq{
+    background-color: rgba(77,238,184,0.3);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.icon-faq{
+    background-color: #4DEEB8;
+    padding: 15px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+.active-setting{
+    background-color: #4DEEB8 !important;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px;
+    border-color: #4DEEB8 !important;
+}
+
+.setting{
+    border: 0 !important;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+}
+
+.content-settings{
+    background-color: white;
+    border: 1px solid #3E3E3E;
+    border-radius: 10px;
+    padding: 20px;
+}

@@ -15,7 +15,35 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/tentang-kami', function () {
+    return view('tentang-kami');
+});
+
+Route::get('/stok-plasma', function () {
+    return view('stok-plasma');
+});
+
+Route::get('/kontak', function () {
+    return view('kontak');
+});
+
+Route::get('/masuk', function () {
+    return view('masuk');
+});
+
+Route::get('/daftar', function () {
+    return view('daftar');
+});
+
+Route::get('/daftar-donor', function () {
+    return view('daftar-donor');
+});
+
+Route::get('/daftar-pendonor', function () {
+    return view('daftar-pendonor');
 });
 
 Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
