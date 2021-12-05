@@ -46,8 +46,37 @@ Route::get('/daftar-pendonor', function () {
     return view('daftar-pendonor');
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+
+Route::get('/stok-plasma-login', function () {
+    return view('stok-plasma-login');
+});
+
+Route::get('/faq', function () {
+    return view('faq');
+});
+
+Route::get('/berita', function () {
+    return view('berita');
+});
+
+Route::get('/user-profile', function () {
+    return view('user-profile');
+});
+
+Route::get('/change-password', function () {
+    return view('change-password');
+});
+
+Route::get('/change-email', function () {
+    return view('change-email');
+});
+
+
 Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
-    Route::view('/dashboard', "dashboard")->name('dashboard');
+    // Route::view('/dashboard', "dashboard")->name('dashboard');
 
     Route::get('/user', [ UserController::class, "index_view" ])->name('user');
     Route::view('/user/new', "pages.user.user-new")->name('user.new');
