@@ -50,8 +50,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
-Route::get('/stok-plasma-login', function () {
-    return view('stok-plasma-login');
+Route::get('/stok-plasma-donor', function () {
+    return view('stok-plasma-donor');
 });
 
 Route::get('/faq', function () {

@@ -23,7 +23,7 @@
                   <a class="nav-link" href="/dashboard">Dashboard</a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="/stok-plasma-login">Stok Plasma <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="/stok-plasma-donor">Stok Plasma <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/berita">Berita & Informasi</a>
@@ -411,7 +411,7 @@
                 <h4>Navigasi</h4>
                 <ul class="nav-bar">
                     <li><a href="/dashboard">Dashboard</a></li>
-                    <li><a href="/stok-plasma-login">Stok Plasma</a></li>
+                    <li><a href="/stok-plasma-donor">Stok Plasma</a></li>
                     <li><a href="/berita">Berita & Informasi</a></li>
                     <li><a href="/faq">FAQ</a></li>
                 </ul>

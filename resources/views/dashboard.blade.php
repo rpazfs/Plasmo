@@ -23,7 +23,7 @@
                   <a class="nav-link" href="/dashboard">Dashboard <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/stok-plasma-login">Stok Plasma</a>
+                  <a class="nav-link" href="/stok-plasma-donor">Stok Plasma</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/berita">Berita & Informasi</a>
@@ -138,7 +138,7 @@
                                 </div>
                             </div>
                             <div class="button mt-4 align-self-center" style="margin-bottom: 10px;">
-                                <a href="/stok-plasma-login">
+                                <a href="/stok-plasma-donor">
                                     <button type="button" class="primary-btn mr-3 mx-auto">Lihat Semua Stok</button>
                                 </a>
                             </div>
@@ -169,7 +169,7 @@
                 <h4>Navigasi</h4>
                 <ul class="nav-bar">
                     <li><a href="/dashboard">Dashboard</a></li>
-                    <li><a href="/stok-plasma-login">Stok Plasma</a></li>
+                    <li><a href="/stok-plasma-donor">Stok Plasma</a></li>
                     <li><a href="/berita">Berita & Informasi</a></li>
                     <li><a href="/faq">FAQ</a></li>
                 </ul>
