@@ -336,6 +336,30 @@ a{
     border-color: #3E3E3E !important;
 }
 
+.custom-select{
+    background-color: white !important;
+    border-radius: 10px !important;
+    padding: 10px !important;
+    border-color: #3E3E3E !important;
+    height: fit-content !important;
+}
+
+.custom-file-label{
+    background-color: white !important;
+    border-radius: 10px !important;
+    padding: 10px !important;
+    border-color: #3E3E3E !important;
+    height: fit-content !important;
+}
+
+.custom-file-input{
+    border-radius: 10px !important;
+    padding: 10px !important;
+    height: fit-content !important;
+    border-color: #3E3E3E !important;
+    background-color: #C4C4C4 !important;
+}
+
 .pendonor, .donor{
     background-color: white;
     border: 1px solid #3E3E3E;

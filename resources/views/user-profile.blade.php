@@ -80,10 +80,6 @@
                             <input type="text" class="form-control" id="nama"  placeholder="Masukkan Nama Lengkap Anda">
                         </div>
                         <div class="form-group">
-                            <label for="number" style="font-weight: bold; color: #122D74; font-family: 'Montserrat';">NIK</label>
-                            <input type="number" class="form-control" id="NIK"  placeholder="Masukkan NIK Anda">
-                        </div>
-                        <div class="form-group">
                             <label for="text" style="font-weight: bold; color: #122D74; font-family: 'Montserrat';">No. Telepon</label>
                             <input type="text" class="form-control" id="no-hp"  placeholder="Masukkan Nomor Telepon Anda">
                         </div>

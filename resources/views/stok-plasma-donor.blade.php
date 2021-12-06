@@ -131,9 +131,9 @@
                                     <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: 3</p>
                                 </div>
                             </div>
-                            <div class="button mt-4 align-self-center">
+                            <a class="mt-4 align-self-center" href="/permohonan">
                                 <button type="button" class="primary-btn">Ajukan Permohonan</button>
-                            </div>                            
+                            </a>                                                          
                         </div>   
                     </article>
                     <article class="rumah-sakit-content">
@@ -182,9 +182,9 @@
                                     <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: 3</p>
                                 </div>
                             </div>
-                            <div class="button mt-4 align-self-center">
-                                <button type="button" class="primary-btn mr-3">Ajukan Permohonan</button>
-                            </div>                            
+                            <a class="mt-4 align-self-center" href="/permohonan">
+                                <button type="button" class="primary-btn">Ajukan Permohonan</button>
+                            </a>                                  
                         </div>   
                     </article>
                 </div>

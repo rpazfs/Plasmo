@@ -74,6 +74,10 @@ Route::get('/change-email', function () {
     return view('change-email');
 });
 
+Route::get('/permohonan', function () {
+    return view('permohonan');
+});
+
 
 Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     // Route::view('/dashboard', "dashboard")->name('dashboard');
