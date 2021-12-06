@@ -76,61 +76,32 @@
                             <label for="text" style="font-weight: bold;font-family: 'Montserrat';">Nama Pasien</label>
                             <input type="text" class="form-control" id="nama-wali"  placeholder="Masukkan Nama Lengkap Pasien">
                         </div>
-                        <div class="from-1 d-flex justify-content-between mb-3">
+                        <div class="from-1 d-flex justify-content-between">
                             <div class="jenis-kelamin mr-3" style="width:50%;">
-                                <label for="radio" style="font-weight: bold;font-family: 'Montserrat';">Jenis Kelamin</label>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="pria" name="customRadio" class="custom-control-input">
-                                    <label class="custom-control-label" for="pria">Pria</label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="wanita" name="customRadio" class="custom-control-input">
-                                    <label class="custom-control-label" for="wanita">Wanita</label>
-                                </div>
+                                <label for="rhesus" style="font-weight: bold;font-family: 'Montserrat';">Jenis Kelamin</label>
+                                <select class="custom-select">
+                                    <option selected>Pilih Jenis Kelamin Pasien</option>
+                                    <option value="1">Pria</option>
+                                    <option value="2">Wanita</option>
+                                </select>
                             </div>
-                            <div class="golongan-darah" style="width:50%;">
-                                <label for="radio" style="font-weight: bold;font-family: 'Montserrat';">Golongan Darah</label>
-                                <br>                                
-                                <div class="custom-control custom-radio custom-control-inline mr-5">
-                                    <input type="radio" id="gol-a-plus" name="gol-a-plus" class="custom-control-input">
-                                    <label class="custom-control-label" for="gol-a-plus">A+</label>
-                                </div>                                
-                                <div class="custom-control custom-radio custom-control-inline mr-5">
-                                    <input type="radio" id="gol-b-plus" name="gol-b-plus" class="custom-control-input">
-                                    <label class="custom-control-label" for="gol-b-plus">B+</label>
-                                </div>
-                                <div class="custom-control custom-radio custom-control-inline mr-5">
-                                    <input type="radio" id="gol-o-plus" name="gol-o-plus" class="custom-control-input">
-                                    <label class="custom-control-label" for="gol-o-plus">O+</label>
-                                </div>
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="gol-ab-plus" name="gol-ab-plus" class="custom-control-input">
-                                    <label class="custom-control-label" for="gol-ab-plus">AB+</label>
-                                </div>
-                                <br>
-                                <div class="custom-control custom-radio custom-control-inline mr-5">
-                                    <input type="radio" id="gol-a-min" name="gol-a-min" class="custom-control-input">
-                                    <label class="custom-control-label" for="gol-a-min">A-</label>
-                                </div>
-                                <div class="custom-control custom-radio custom-control-inline mr-5 ml-1">
-                                    <input type="radio" id="gol-b-min" name="gol-b-min" class="custom-control-input">
-                                    <label class="custom-control-label" for="gol-b-min">B-</label>
-                                </div>                                
-                                <div class="custom-control custom-radio custom-control-inline mr-5 ml-1">
-                                    <input type="radio" id="gol-o-min" name="gol-o-min" class="custom-control-input">
-                                    <label class="custom-control-label" for="gol-o-min">O-</label>
-                                </div>
-                                <div class="custom-control custom-radio custom-control-inline ml-1">
-                                    <input type="radio" id="gol-ab-min" name="gol-ab-min" class="custom-control-input">
-                                    <label class="custom-control-label" for="gol-ab-min">AB-</label>
-                                </div>                               
+                            <div class="form-group usia" style="width:50%;">
+                                <label for="number" style="font-weight: bold; font-family: 'Montserrat';">Usia Pasien</label>
+                                <input type="number" class="form-control" id="usia"  placeholder="Masukkan Usia Pasien">
                             </div>
                         </div>
-                        <div class="form-2 d-flex justify-content-between">
-                            <div class="form-group usia mr-3" style="width:50%;">
-                                <label for="number" style="font-weight: bold; font-family: 'Montserrat';">Usia</label>
-                                <input type="number" class="form-control" id="usia"  placeholder="Masukkan Usia Anda">
-                            </div>
+                        <div class="form-2 d-flex justify-content-between mb-3">
+                            <div class="golongan-darah mr-3" style="width:50%;">
+                                <label for="radio" style="font-weight: bold;font-family: 'Montserrat';">Golongan Darah</label>
+                                <br>
+                                <select class="custom-select">
+                                    <option selected>Pilih Golongan Darah Pasien</option>
+                                    <option value="1">A</option>
+                                    <option value="2">B</option>
+                                    <option value="3">O</option>
+                                    <option value="4">AB</option>
+                                </select>                          
+                            </div>                            
                             <div class="rhesus" style="width:50%;">
                                 <label for="rhesus" style="font-weight: bold;font-family: 'Montserrat';">Rhesus Pasien</label>
                                 <select class="custom-select">
