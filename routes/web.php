@@ -50,8 +50,16 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
+Route::get('/dashboard-pendonor', function () {
+    return view('dashboard-pendonor');
+});
+
 Route::get('/stok-plasma-donor', function () {
     return view('stok-plasma-donor');
+});
+
+Route::get('/stok-plasma-pendonor', function () {
+    return view('stok-plasma-pendonor');
 });
 
 Route::get('/faq', function () {
@@ -76,6 +84,10 @@ Route::get('/change-email', function () {
 
 Route::get('/permohonan', function () {
     return view('permohonan');
+});
+
+Route::get('/pendonor', function () {
+    return view('pendonor');
 });
 
 

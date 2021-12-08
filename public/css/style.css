@@ -344,6 +344,14 @@ a{
     height: fit-content !important;
 }
 
+.input-date{
+    background-color: white !important;
+    border-radius: 10px !important;
+    padding: 10px !important;
+    border: 1px solid #3E3E3E !important;
+    height: fit-content !important;
+}
+
 .custom-file-label{
     background-color: white !important;
     border-radius: 10px !important;
