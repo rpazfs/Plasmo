@@ -16,8 +16,9 @@ class CreateHospitalTable extends Migration
         Schema::create('hospital', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->text('address')->nullable();
             $table->string('blood_type');
-            $table->string('blood_stock');
+            $table->integer('blood_stock');
             $table->string('hotline');
             $table->timestamps();
         });
