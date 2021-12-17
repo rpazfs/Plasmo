@@ -19,16 +19,11 @@ class CreatePendonorTable extends Migration
             $table->string('name', 255);
             $table->string('hotline');
             $table->string('gender');
-            $table->string('rhesusblood_type');
-            $table->string('NIK', 255);
+            $table->string('NIK', 16);
             $table->integer('age');
             $table->integer('weight');
             $table->integer('height');
             $table->string('covid_infected');
-            $table->string('province');
-            $table->string('city');
-            $table->string('districts');
-            $table->string('street');
             $table->string('donors');
             $table->string('donors_apheresis');
             $table->string('donors_hospital');

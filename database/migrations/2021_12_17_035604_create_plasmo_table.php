@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHospitalTable extends Migration
+class CreatePlasmoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateHospitalTable extends Migration
      */
     public function up()
     {
-        Schema::create('hospital', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name');
-            $table->text('address')->nullable();
-            $table->string('hotline');
+        Schema::create('plasmo', function (Blueprint $table) {
+            $table->id();
+            $table->enum('blood_type',['A', 'AB','B','O']);
+            $table->integer('blood_stock');
+            $table->boolean('rhesusblood_type');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateHospitalTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hospital');
+        Schema::dropIfExists('plasmo');
     }
 }
