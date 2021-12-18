@@ -14,7 +14,11 @@ class PasienController extends Controller
      */
     public function index()
     {
-        //
+        abort_if(Gate::denies('pasien_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        $pasien = Pasien::all();
+
+        return view('pasien.index', compact('pasien'));
     }
 
     /**
