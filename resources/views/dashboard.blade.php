@@ -41,8 +41,14 @@
                     <div class="dropdown-menu dropdown-menu-right">
                         <a href="dashboard"><button class="dropdown-item" type="button">Dashboard</button>  </a>                    
                         <a href="user-profile"><button class="dropdown-item" type="button">Pengaturan Akun</button></a>
-                        <button class="dropdown-item" type="button">Notifikasi</button>
-                        <button class="dropdown-item" type="button">Keluar</button>
+                        <a href="#"><button class="dropdown-item" type="button">Notifikasi</button></a>
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+
+                            <a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger" onclick="event.preventDefault();this.closest('form').submit();">
+                                Keluar
+                            </a>
+                        </form>
                     </div>
                 </div>
             </div>

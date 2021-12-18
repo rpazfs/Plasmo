@@ -46,54 +46,21 @@ Route::get('/daftar-pendonor', function () {
     return view('daftar-pendonor');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
 
-Route::get('/dashboard-pendonor', function () {
-    return view('dashboard-pendonor');
-});
-
-Route::get('/stok-plasma-donor', function () {
-    return view('stok-plasma-donor');
-});
-
-Route::get('/stok-plasma-pendonor', function () {
-    return view('stok-plasma-pendonor');
-});
-
-Route::get('/faq', function () {
-    return view('faq');
-});
-
-Route::get('/berita', function () {
-    return view('berita');
-});
-
-Route::get('/user-profile', function () {
-    return view('user-profile');
-});
-
-Route::get('/change-password', function () {
-    return view('change-password');
-});
-
-Route::get('/change-email', function () {
-    return view('change-email');
-});
-
-Route::get('/permohonan', function () {
-    return view('permohonan');
-});
-
-Route::get('/pendonor', function () {
-    return view('pendonor');
-});
 
 
 Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
-    // Route::view('/dashboard', "dashboard")->name('dashboard');
-
+    Route::view('/dashboard', "dashboard")->name('dashboard');
+    Route::view('/dashboard-pendonor', "dashboard-pendonor")->name('dashboard-pendonor');
+    Route::view('/stok-plasma-pendonor', "stok-plasma-pendonor")->name('stok-plasma-pendonor');
+    Route::view('/stok-plasma-donor', "stok-plasma-donor")->name('stok-plasma-donor');
+    Route::view('/pendonor', "pendonor")->name('pendonor');
+    Route::view('/permohonan', "permohonan")->name('permohonan');
+    Route::view('/faq', "faq")->name('faq');
+    Route::view('/berita', "berita")->name('berita');
+    Route::view('/user-profile', "user-profile")->name('user-profile');
+    Route::view('/change-password', "change-password")->name('change-password');
+    Route::view('/change-email', "change-email")->name('change-email');
     Route::get('/user', [ UserController::class, "index_view" ])->name('user');
     Route::view('/user/new', "pages.user.user-new")->name('user.new');
     Route::view('/user/edit/{userId}', "pages.user.user-edit")->name('user.edit');
