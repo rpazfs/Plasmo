@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pendonor extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
+
+    protected $fillable = [
+        'description'
+    ];
 }

@@ -13,6 +13,17 @@ class RoleTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $roles = [
+            [
+                'id'    => 1,
+                'title' => 'Pendonor',
+            ],
+            [
+                'id'    => 2,
+                'title' => 'Pasien',
+            ],
+        ];
+
+        Role::insert($roles);
     }
 }

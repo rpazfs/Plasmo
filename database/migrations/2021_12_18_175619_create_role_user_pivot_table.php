@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserPivotTable extends Migration
+class CreateRoleUserPivotTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateUserPivotTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_pivot', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('role_user_pivot', function (Blueprint $table) {
+            $table->foreignId('role_id')->references('id')->on('roles')->cascadeOnDelete();
+            $table->foreignId('user_id')->references('id')->on('users')->cascadeOnDelete();
         });
     }
 
@@ -26,6 +26,6 @@ class CreateUserPivotTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_pivot');
+        Schema::dropIfExists('role_user_pivot');
     }
 }

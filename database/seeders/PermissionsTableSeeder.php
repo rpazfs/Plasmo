@@ -13,6 +13,17 @@ class PermissionsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $permissions = [
+            [
+                'id'    => 1,
+                'title' => 'pendonor_access',
+            ],
+            [
+                'id'    => 2,
+                'title' => 'pasien_access',
+            ],
+        ];
+
+        Permission::insert($permissions);
     }
 }
