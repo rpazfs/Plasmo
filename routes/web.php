@@ -84,6 +84,7 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::view('/change-password-pendonor', "pages.pendonor.change-password")->name('change-password');
     Route::view('/change-email-pendonor', "pages.pendonor.change-email")->name('change-email');
     Route::post('submit', [PendonorController::class,'store']);
+    Route::get('pendonor', [PendonorController::class, 'getPendonor']);
 
     Route::get('/user', [ UserController::class, "index" ])->name('user');
     Route::view('/user/new', "pages.user.user-new")->name('user.new');

@@ -12,10 +12,23 @@ class PendonorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    use Queueable, SerializesModels;
+
+    public $pendonor;
+    public function __construct(Pendonor $pendonor)
+    {
+        $this->pendonor = $pendonor;
+    }
+
     public function index()
     {
-
         return view('pendonor.dashboard-pendonor');
+    }
+
+    public function getPendonor()
+    {
+        $pendonor = Pendonor::all();
+        return view('pages.pendonor.stok-plasma-pendonor', compact('pendonor.stok-plasma-pendonor'));
     }
 
     /**

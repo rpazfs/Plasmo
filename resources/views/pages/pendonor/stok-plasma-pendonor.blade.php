@@ -232,11 +232,32 @@
                                 <th scope="col">Nama Pendonor</th>
                                 <th scope="col">Golongan Darah</th>
                                 <th scope="col">Email</th>
-                                <th scope="col">Waktu</th>
+                                <th scope="col">Lokasi</th>
                                 <th scope="col">Kontak</th>
                               </tr>
                             </thead>
                             <tbody style="font-family: 'Montserrat';">
+                            @foreach($pendonor as $data)
+                                <tr>    
+                                <th scope="row">{{$data->id_user}}</th>
+                                <td>{{$data->nama_pendonor}}</td>
+                                <td>{{$data->blood_type}}</td>
+                                <td>{{$data->email}}</td>
+                                <td>{{$data->city}}</td>
+                                <td class="d-flex">
+                                    <a href="#">
+                                        <div class="icon-telepon align-self-center mr-3" style="background-color: #31BA45; padding: 5px 10px;">
+                                            <i class="fa fa-phone" style="color: white;"></i>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="icon-email align-self-center mr-3" style="background-color: #2A7DF5; padding: 5px 9px;">
+                                            <i class="fa fa-envelope" style="color: white;"></i>
+                                        </div>
+                                    </a>
+                                </td>                 
+                                </tr>
+                            @endforeach
                               <tr>
                                 <th scope="row">1</th>
                                 <td>
