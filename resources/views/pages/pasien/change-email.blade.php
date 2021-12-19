@@ -39,10 +39,10 @@
                 <div class="btn-group">
                     <button type="button" class="btn btn-secondary dropdown-toggle" style="color: #122D74; background-color: white; border: 0;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                     <div class="dropdown-menu dropdown-menu-right">
-                      <a href="/dashboard"><button class="dropdown-item" type="button">Dashboard</button>  </a>                    
-                      <a href="/user-profile"><button class="dropdown-item" type="button">Pengaturan Akun</button></a>
-                      <button class="dropdown-item" type="button">Notifikasi</button>
-                      <button class="dropdown-item" type="button">Keluar</button>
+                        <a href="/dashboard"><button class="dropdown-item" type="button">Dashboard</button>  </a>                    
+                        <a href="/user-profile"><button class="dropdown-item" type="button">Pengaturan Akun</button></a>
+                        <button class="dropdown-item" type="button">Notifikasi</button>
+                        <button class="dropdown-item" type="button">Keluar</button>
                     </div>
                 </div>
             </div>
@@ -59,25 +59,21 @@
                         <a href="/user-profile" class="list-group-item list-group-item-action setting ">
                           User Profile
                         </a>
-                        <a href="/change-password" class="list-group-item list-group-item-action setting active-setting active">Ganti Password</a>
-                        <a href="/change-email" class="list-group-item list-group-item-action setting">Ganti Email</a>
+                        <a href="/change-password" class="list-group-item list-group-item-action setting ">Ganti Password</a>
+                        <a href="/change-email" class="list-group-item list-group-item-action setting active-setting active">Ganti Email</a>
                       </div>
                 </div>
                 <div class="content-settings d-flex flex-column" style="width: 100%;">
                     <form style="width: 100%;">
                         <div class="form-group">
-                            <label for="password" style="font-weight: bold; color: #122D74; font-family: 'Montserrat';">Password Lama</label>
-                            <input type="password" class="form-control" id="password-lama"  placeholder="Masukkan Password Lama Anda">
+                            <label for="email" style="font-weight: bold; color: #122D74; font-family: 'Montserrat';">Email Lama</label>
+                            <input type="email" class="form-control" id="email-lama"  placeholder="Masukkan Email Lama Anda">
                         </div>
                         <br>
                         <div class="form-group">
-                            <label for="password" style="font-weight: bold; color: #122D74; font-family: 'Montserrat';">Password Baru</label>
-                            <input type="password" class="form-control" id="password-baru"  placeholder="Masukkan Password baru Anda">
-                            <p style="font-size: 12px !important;">kami menyarankan Anda untuk membuat password yang kuat dan unik untuk menghindari banyak akun yang disusupi dari satu kata sandi yang dicuri</p>
-                        </div>
-                        <div class="form-group">
-                            <label for="password" style="font-weight: bold; color: #122D74; font-family: 'Montserrat';">Re-Enter Password</label>
-                            <input type="password" class="form-control" id="password-enter"  placeholder="Masukkan kembali password baru Anda">
+                            <label for="email" style="font-weight: bold; color: #122D74; font-family: 'Montserrat';">Email Baru</label>
+                            <input type="email" class="form-control" id="email-baru"  placeholder="Masukkan Email baru Anda">
+                            <p style="font-size: 12px !important;">kami akan mengirimkan email kepada Anda untuk mengklarifikasi perubahan email yang Anda lakukan</p>
                         </div>
                         <button type="submit" class="primary-btn mb-2 mt-4" style="width: 100%;" >Simpan Perubahan</button>
                     </form>
@@ -86,32 +82,7 @@
         </section>        
     </main>
 
-    <footer class="container">
-        <div class="footer d-flex pt-5">
-            <div class="footer-logo" style="width: 100%;" >
-                <img src="{{asset('/images/footer-logo.png')}}" alt="logo plasmo">
-                <p>Kita hadapi bersama Covid-19</p>
-            </div>
-            <div class="footer-nav" style="width: 100%;">
-                <h4>Navigasi</h4>
-                <ul class="nav-bar">
-                    <li><a href="/dashboard">Dashboard</a></li>
-                    <li><a href="/stok-plasma-donor">Stok Plasma</a></li>
-                    <li><a href="/berita">Berita & Informasi</a></li>
-                    <li><a href="/faq">FAQ</a></li>
-                </ul>
-            </div>
-            <div class="alamat" style="width: 100%;">
-                <h4>Alamat</h4>
-                <p>
-                    Jln. Raya Lembang, No 12.
-                    Kabupaten Bandung Barat, Kecamatan Lembang.
-                    Provinsi Jawa Barat, Indonesia. 40391.
-                </p>
-            </div>
-        </div>
-        <p class="text-center mt-5">Copyrights © 2021 by <span style="color: #122D74; font-weight: bold;">Plasmo</span></p>
-    </footer>
+    @include('components.footer-pasien')
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

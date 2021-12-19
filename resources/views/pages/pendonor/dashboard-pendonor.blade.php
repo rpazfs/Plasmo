@@ -20,10 +20,10 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav ml-auto mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                  <a class="nav-link" href="/dashboard">Dashboard <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="/dashboard-pendonor">Dashboard <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/stok-plasma-donor">Stok Plasma</a>
+                  <a class="nav-link" href="/stok-plasma-pendonor">Stok Plasma</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/berita">Berita & Informasi</a>
@@ -41,14 +41,8 @@
                     <div class="dropdown-menu dropdown-menu-right">
                         <a href="dashboard"><button class="dropdown-item" type="button">Dashboard</button>  </a>                    
                         <a href="user-profile"><button class="dropdown-item" type="button">Pengaturan Akun</button></a>
-                        <a href="#"><button class="dropdown-item" type="button">Notifikasi</button></a>
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-
-                            <a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger" onclick="event.preventDefault();this.closest('form').submit();">
-                                Keluar
-                            </a>
-                        </form>
+                        <button class="dropdown-item" type="button">Notifikasi</button>
+                        <button class="dropdown-item" type="button">Keluar</button>
                     </div>
                 </div>
             </div>
@@ -60,7 +54,7 @@
         <section class="hero">
             <article class="hero pt-5 pb-5 container">
                 <h1>Halo, Raja Pasha</h1>
-                <p style="width: 50%;">Anda dapat mengajukan permohonan plasma darah untuk perawatan Anda melalui laman stok plasma.</p>
+                <p style="width: 50%;">Ayo donorkan plasma darah anda, setiap kontribusi anda sangat membantu para pasien dalam menghadapi Covid-19.</p>
             </article>
         </section>
         <section class="daftar-rs">
@@ -165,32 +159,7 @@
         </section>
     </main>
 
-    <footer class="container">
-        <div class="footer d-flex pt-5">
-            <div class="footer-logo" style="width: 100%;" >
-                <img src="{{asset('/images/footer-logo.png')}}" alt="logo plasmo">
-                <p>Kita hadapi bersama Covid-19</p>
-            </div>
-            <div class="footer-nav" style="width: 100%;">
-                <h4>Navigasi</h4>
-                <ul class="nav-bar">
-                    <li><a href="/dashboard">Dashboard</a></li>
-                    <li><a href="/stok-plasma-donor">Stok Plasma</a></li>
-                    <li><a href="/berita">Berita & Informasi</a></li>
-                    <li><a href="/faq">FAQ</a></li>
-                </ul>
-            </div>
-            <div class="alamat" style="width: 100%;">
-                <h4>Alamat</h4>
-                <p>
-                    Jln. Raya Lembang, No 12.
-                    Kabupaten Bandung Barat, Kecamatan Lembang.
-                    Provinsi Jawa Barat, Indonesia. 40391.
-                </p>
-            </div>
-        </div>
-        <p class="text-center mt-5">Copyrights © 2021 by <span style="color: #122D74; font-weight: bold;">Plasmo</span></p>
-    </footer>
+    @include('components.footer-pendonor')
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
