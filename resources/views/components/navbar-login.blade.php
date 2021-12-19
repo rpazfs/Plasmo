@@ -6,12 +6,25 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav ml-auto mr-auto mt-2 mt-lg-0">
 
+                    @if (auth()->user()->role_id == 1)
+                      <li class="nav-item {{Request::is('user') ? 'active':''}}">
+                        <a class="nav-link" href="/user">Users <span class="sr-only">(current)</span></a>
+                      </li>
+                    @endif
+
+
                     @if (auth()->user()->role_id == 2)
                       <li class="nav-item {{Request::is('dashboard') ? 'active':''}}">
                         <a class="nav-link" href="/dashboard">Dashboard <span class="sr-only">(current)</span></a>
                       </li>
                       <li class="nav-item {{Request::is('stok-plasma-donor') ? 'active':''}}">
                         <a class="nav-link" href="/stok-plasma-donor">Stok Plasma</a>
+                      </li>
+                      <li class="nav-item {{Request::is('berita') ? 'active':''}}">
+                          <a class="nav-link" href="/berita">Berita & Informasi</a>
+                      </li>
+                      <li class="nav-item {{Request::is('faq') ? 'active':''}}">
+                        <a class="nav-link" href="/faq">FAQ</a>
                       </li>
                     @endif
 
@@ -22,15 +35,17 @@
                       <li class="nav-item {{Request::is('stok-plasma-pendonor') ? 'active':''}}">
                         <a class="nav-link" href="/stok-plasma-pendonor">Stok Plasma</a>
                       </li>
+                      <li class="nav-item {{Request::is('berita') ? 'active':''}}">
+                          <a class="nav-link" href="/berita">Berita & Informasi</a>
+                      </li>
+                      <li class="nav-item {{Request::is('faq') ? 'active':''}}">
+                        <a class="nav-link" href="/faq">FAQ</a>
+                      </li>
                     @endif
+
                 
                 
-                <li class="nav-item {{Request::is('berita') ? 'active':''}}">
-                    <a class="nav-link" href="/berita">Berita & Informasi</a>
-                </li>
-                <li class="nav-item {{Request::is('faq') ? 'active':''}}">
-                  <a class="nav-link" href="/faq">FAQ</a>
-                </li>
+                
               </ul>
               <div class="form-inline my-2 my-lg-0">                
                 <div class="user-image mr-2">

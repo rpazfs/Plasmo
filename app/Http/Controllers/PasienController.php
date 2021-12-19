@@ -14,9 +14,6 @@ class PasienController extends Controller
      */
     public function index()
     {
-        if (Gate::denies('manage-pasien')) {
-            abort(403);
-        }
 
         return view('pasien.dashboard');
     }
