@@ -21,11 +21,11 @@
                 <div class="daftar-upper d-flex flex-column" style="width: 30%;">
                     <h3 class="mr-auto align-self-center" style="font-size: 24px !important;">Pengaturan Akun</h3>                    
                     <div class="list-group mt-3">
-                        <a href="/user-profile" class="list-group-item list-group-item-action setting ">
+                        <a href="/user-profile-pendonor" class="list-group-item list-group-item-action setting ">
                           User Profile
                         </a>
-                        <a href="/change-password" class="list-group-item list-group-item-action setting ">Ganti Password</a>
-                        <a href="/change-email" class="list-group-item list-group-item-action setting active-setting active">Ganti Email</a>
+                        <a href="/change-password-pendonor" class="list-group-item list-group-item-action setting ">Ganti Password</a>
+                        <a href="/change-email-pendonor" class="list-group-item list-group-item-action setting active-setting active">Ganti Email</a>
                       </div>
                 </div>
                 <div class="content-settings d-flex flex-column" style="width: 100%;">

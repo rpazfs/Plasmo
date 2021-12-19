@@ -9,8 +9,8 @@
                 <ul class="nav-bar">
                     <li><a href="/dashboard-pendonor">Dashboard</a></li>
                     <li><a href="/stok-plasma-pendonor">Stok Plasma</a></li>
-                    <li><a href="/berita">Berita & Informasi</a></li>
-                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/berita-pendonor">Berita & Informasi</a></li>
+                    <li><a href="/faq-pendonor">FAQ</a></li>
                 </ul>
             </div>
             <div class="alamat" style="width: 100%;">

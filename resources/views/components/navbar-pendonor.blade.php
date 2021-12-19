@@ -11,11 +11,11 @@
                 <li class="nav-item {{Request::is('stok-plasma-pendonor') ? 'active':''}}">
                   <a class="nav-link" href="/stok-plasma-pendonor">Stok Plasma</a>
                 </li>
-                <li class="nav-item {{Request::is('berita') ? 'active':''}}">
-                    <a class="nav-link" href="/berita">Berita & Informasi</a>
+                <li class="nav-item {{Request::is('berita-pendonor') ? 'active':''}}">
+                    <a class="nav-link" href="/berita-pendonor">Berita & Informasi</a>
                 </li>
-                <li class="nav-item {{Request::is('faq') ? 'active':''}}">
-                  <a class="nav-link" href="/faq">FAQ</a>
+                <li class="nav-item {{Request::is('faq-pendonor') ? 'active':''}}">
+                  <a class="nav-link" href="/faq-pendonor">FAQ</a>
                 </li>
               </ul>
               <div class="form-inline my-2 my-lg-0">                
@@ -26,7 +26,7 @@
                     <button type="button" class="btn btn-secondary dropdown-toggle" style="color: #122D74; background-color: white; border: 0;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                     <div class="dropdown-menu dropdown-menu-right">
                         <a href="/dashboard-pendonor"><button class="dropdown-item" type="button">Dashboard</button>  </a>                    
-                        <a href="/user-profile"><button class="dropdown-item" type="button">Pengaturan Akun</button></a>
+                        <a href="/user-profile-pendonor"><button class="dropdown-item" type="button">Pengaturan Akun</button></a>
                         <a href="#"><button class="dropdown-item" type="button">Notifikasi</button></a>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
