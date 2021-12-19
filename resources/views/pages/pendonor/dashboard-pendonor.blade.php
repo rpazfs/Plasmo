@@ -18,7 +18,7 @@
     <main>
         <section class="hero">
             <article class="hero pt-5 pb-5 container">
-                <h1>Halo, Raja Pasha</h1>
+                <h1>Halo, {{ Auth::user()->name }}</h1>
                 <p style="width: 50%;">Ayo donorkan plasma darah anda, setiap kontribusi anda sangat membantu para pasien dalam menghadapi Covid-19.</p>
             </article>
         </section>

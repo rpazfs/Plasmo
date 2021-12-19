@@ -18,7 +18,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-
 Route::get('/tentang-kami', function () {
     return view('tentang-kami');
 });
@@ -51,7 +50,7 @@ Route::get('/daftar-pendonor', function () {
 
 
 Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
-    
+
     //Route for pasien
     Route::view('/dashboard', "pages.pasien.dashboard")->name('dashboard');    
     Route::view('/stok-plasma-donor', "pages.pasien.stok-plasma-donor")->name('stok-plasma-donor');    
