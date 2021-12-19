@@ -10,6 +10,9 @@
                       <li class="nav-item {{Request::is('user') ? 'active':''}}">
                         <a class="nav-link" href="/user">Users <span class="sr-only">(current)</span></a>
                       </li>
+                      <li class="nav-item {{Request::is('rumah-sakit') ? 'active':''}}">
+                        <a class="nav-link" href="/rumah-sakit">Rumah Sakit <span class="sr-only">(current)</span></a>
+                      </li>
                     @endif
 
 
