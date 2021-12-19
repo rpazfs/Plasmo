@@ -25,75 +25,76 @@
         <section class="daftar-rs pb-5">
             <article class="daftar-rs container">
                 <div class="content-settings d-flex flex-column" style="width: 100%;">
-                    <form style="width: 100%;">
+                    <form style="width: 100%;" action="submit" method="POST">
+                    @csrf
                         <h4 style="font-family: 'Montserrat' !important; font-weight: bold !important;">Data Wali</h4>
                         <div class="form-group">
                             <label for="text" style="font-weight: bold;font-family: 'Montserrat';">Nama Pemohon</label>
-                            <input type="text" class="form-control" id="nama-wali"  placeholder="Masukkan Nama Lengkap Pemohon">
+                            <input type="text" class="form-control" id="nama-wali" name="nama_pemohon"  placeholder="Masukkan Nama Lengkap Pemohon">
                         </div>
                         <div class="form-group">
                             <label for="text" style="font-weight: bold; font-family: 'Montserrat';">No. Telepon (WA) Yang Dapat Dihubungi</label>
-                            <input type="text" class="form-control" id="no-hp-wali"  placeholder="Masukkan Nomor Telepon Anda">
+                            <input type="text" class="form-control" id="no-hp-wali" name="hotline"  placeholder="Masukkan Nomor Telepon Anda">
                             <p>Pastikan No. HP yang di masukan belum pernah dipakai untuk mendaftarkan pengajuan permohonan sebelumnya</p>
                         </div>
                         <h4 style="font-family: 'Montserrat' !important; font-weight: bold !important;">Data Pasien</h4>
                         <div class="form-group">
                             <label for="text" style="font-weight: bold;font-family: 'Montserrat';">Nama Pasien</label>
-                            <input type="text" class="form-control" id="nama-wali"  placeholder="Masukkan Nama Lengkap Pasien">
+                            <input type="text" class="form-control" id="nama-wali" name="nama_pasien" placeholder="Masukkan Nama Lengkap Pasien">
                         </div>
                         <div class="from-1 d-flex justify-content-between">
                             <div class="jenis-kelamin mr-3" style="width:50%;">
                                 <label for="rhesus" style="font-weight: bold;font-family: 'Montserrat';">Jenis Kelamin</label>
-                                <select class="custom-select">
+                                <select class="custom-select" name="gender">
                                     <option selected>Pilih Jenis Kelamin Pasien</option>
-                                    <option value="1">Pria</option>
-                                    <option value="2">Wanita</option>
+                                    <option value="Pria">Pria</option>
+                                    <option value="Wanita">Wanita</option>
                                 </select>
                             </div>
                             <div class="form-group usia" style="width:50%;">
                                 <label for="number" style="font-weight: bold; font-family: 'Montserrat';">Usia Pasien</label>
-                                <input type="number" class="form-control" id="usia"  placeholder="Masukkan Usia Pasien">
+                                <input type="number" class="form-control" id="usia" name="age" placeholder="Masukkan Usia Pasien">
                             </div>
                         </div>
                         <div class="form-2 d-flex justify-content-between mb-3">
                             <div class="golongan-darah mr-3" style="width:50%;">
                                 <label for="radio" style="font-weight: bold;font-family: 'Montserrat';">Golongan Darah</label>
                                 <br>
-                                <select class="custom-select">
+                                <select class="custom-select" name="blood_type">
                                     <option selected>Pilih Golongan Darah Pasien</option>
-                                    <option value="1">A</option>
-                                    <option value="2">B</option>
-                                    <option value="3">O</option>
-                                    <option value="4">AB</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="O">O</option>
+                                    <option value="AB">AB</option>
                                 </select>                          
                             </div>                            
                             <div class="rhesus" style="width:50%;">
                                 <label for="rhesus" style="font-weight: bold;font-family: 'Montserrat';">Rhesus Pasien</label>
-                                <select class="custom-select">
+                                <select class="custom-select" name="rhesus">
                                     <option selected>Pilih Rhesus Pasien</option>
-                                    <option value="1">Positif</option>
-                                    <option value="2">Negatif</option>
+                                    <option value="Positif">Positif</option>
+                                    <option value="Negatif">Negatif</option>
                                 </select>
                             </div>                        
                         </div>
                         <div class="form-3 d-flex">
                             <div class="form-group mr-3" style="width:50%;">
                                 <label for="text" style="font-weight: bold; font-family: 'Montserrat';">Rumah Sakit Dirawat</label>
-                                <input type="text" class="form-control" id="rs-dirawat"  placeholder="Masukkan Nama Rumah Sakit">
+                                <input type="text" class="form-control" id="rs-dirawat" name="hospital"  placeholder="Masukkan Nama Rumah Sakit">
                             </div>
                             <div class="form-group" style="width:50%;">
                                 <label for="text" style="font-weight: bold; font-family: 'Montserrat';">Kamar di Rumah Sakit</label>
-                                <input type="text" class="form-control" id="kamar-rs"  placeholder="Masukkan Nama Kamar Pasien">
+                                <input type="text" class="form-control" id="kamar-rs" name="hospital_room"  placeholder="Masukkan Nama Kamar Pasien">
                             </div>
                         </div>
                         <div class="form-4 d-flex">
                             <div class="form-group mr-3" style="width:50%;">
                                 <label for="text" style="font-weight: bold; font-family: 'Montserrat';">Provinsi</label>
-                                <input type="text" class="form-control" id="provinsi"  placeholder="Masukkan Provinsi Pasien Berada">
+                                <input type="text" class="form-control" id="provinsi" name="province"  placeholder="Masukkan Provinsi Pasien Berada">
                             </div>
                             <div class="form-group" style="width:50%;">
                                 <label for="text" style="font-weight: bold; font-family: 'Montserrat';">Kota/Kabupaten</label>
-                                <input type="text" class="form-control" id="kota"  placeholder="Masukkan Kota/Kabupaten Pasien Berada">
+                                <input type="text" class="form-control" id="kota" name="city"  placeholder="Masukkan Kota/Kabupaten Pasien Berada">
                             </div>
                         </div>
                         <br>
@@ -102,30 +103,28 @@
                             <div class="file mr-3" style="width:30%;">
                                 <label for="file" style="font-weight: bold;font-family: 'Montserrat';">Upload Surat Permohonan TPK</label>
                                 <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="file-tpk">
+                                <input type="file" class="custom-file-input" name="File_TPK" id="file-tpk">
                                 <label class="custom-file-label" for="file-tpk">Unggah File</label>
                                 </div>
                             </div>                            
                             <div class="form-group" style="width:70%;">
                                 <label for="text" style="font-weight: bold; font-family: 'Montserrat';">Link Surat Permohonan TPK</label>
-                                <input type="text" class="form-control" id="link"  placeholder="Masukkan Link Surat TPK">
+                                <input type="text" class="form-control" id="link" name="Link_TPK"  placeholder="Masukkan Link Surat TPK">
                             </div>
                         </div>                        
                         <div class="form-group">
                             <label for="number" style="font-weight: bold; font-family: 'Montserrat';">Jumlah Plasma Yang Dibutuhkan</label>
-                            <input type="number" class="form-control" id="plasma"  placeholder="Masukan jumlah plasma yang pasien butuhkan">
+                            <input type="number" class="form-control" id="plasma" name="jumlah_plasma"  placeholder="Masukan jumlah plasma yang pasien butuhkan">
                         </div>
-                        <div class="vaksin" style="width:50%;">
-                                <label for="radio" style="font-weight: bold;font-family: 'Montserrat';">Apakah pasien sudah melakukan vaksinasi covid-19 ?</label>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="sudah-vaksin" name="customRadio" class="custom-control-input">
-                                    <label class="custom-control-label" for="sudah-vaksin">Sudah</label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="belum-vaksin" name="customRadio" class="custom-control-input">
-                                    <label class="custom-control-label" for="belum-vaksin">Belum</label>
-                                </div>
-                        </div>
+                        <div class="golongan-darah mr-3" style="width:100%;">
+                                <label for="radio" style="font-weight: bold;font-family: 'Montserrat';">Vaksin</label>
+                                <br>
+                                <select class="custom-select" name="vaccinated">
+                                    <option selected>Sudah di Vaksin ?</option>
+                                    <option value="Sudah">Sudah</option>
+                                    <option value="Belum">Belum</option>
+                                </select>                          
+                        </div>   
                         <button type="submit" class="primary-btn mb-2 mt-4" style="width: 100%;" >Ajukan Permohonan</button>
                     </form>
                 </div>

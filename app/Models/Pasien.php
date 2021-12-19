@@ -10,7 +10,5 @@ class Pasien extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'description'
-    ];
+    public $table = "pasien";
 }

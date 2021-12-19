@@ -39,7 +39,24 @@ class PasienController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pasien = new Pasien;
+        $pasien->nama_pemohon=$request->nama_pemohon;
+        $pasien->hotline=$request->hotline;
+        $pasien->nama_pasien=$request->nama_pasien;
+        $pasien->gender=$request->gender;        
+        $pasien->age=$request->age;
+        $pasien->blood_type=$request->blood_type;
+        $pasien->rhesus=$request->rhesus;
+        $pasien->hospital=$request->hospital;
+        $pasien->hospital_room=$request->hospital_room;
+        $pasien->province=$request->province;
+        $pasien->city=$request->city;
+        $pasien->File_TPK=$request->File_TPK;
+        $pasien->Link_TPK=$request->Link_TPK;
+        $pasien->jumlah_plasma=$request->jumlah_plasma;
+        $pasien->vaccinated=$request->vaccinated;
+        $pasien->save();
+        return redirect('stok-plasma-donor');
     }
 
     /**

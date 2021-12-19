@@ -10,7 +10,5 @@ class Pendonor extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = [
-        'description'
-    ];
+    public $table = "pendonor";
 }

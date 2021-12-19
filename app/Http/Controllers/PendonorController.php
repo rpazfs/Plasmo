@@ -39,7 +39,32 @@ class PendonorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pendonor = new Pendonor;
+        $pendonor->nama_pendonor=$request->nama_pendonor;
+        $pendonor->hotline=$request->hotline;
+        $pendonor->NIK=$request->NIK;
+        $pendonor->gender=$request->gender;
+        $pendonor->age=$request->age;
+        $pendonor->blood_type=$request->blood_type;
+        $pendonor->rhesus=$request->rhesus;
+        $pendonor->weight=$request->weight;
+        $pendonor->height=$request->height;
+        $pendonor->province=$request->province;
+        $pendonor->city=$request->city;
+        $pendonor->kecamatan=$request->kecamatan;
+        $pendonor->kelurahan=$request->nama_pendonor;
+        $pendonor->alamat=$request->alamat;
+        $pendonor->covid_infected=$request->covid_infected;
+        $pendonor->donors=$request->donors;
+        $pendonor->donors_apheresis=$request->donors_apheresis;
+        $pendonor->donors_hospital=$request->donors_hospital;
+        $pendonor->PCR_Positive=$request->PCR_Positive;
+        $pendonor->PCR_Negative=$request->PCR_Negative;
+        $pendonor->PCR_Positive_File=$request->PCR_Positive_File;
+        $pendonor->PCR_Negative_File=$request->PCR_Negative_File;
+        $pendonor->save();
+        return redirect('stok-plasma-pendonor');
+
     }
 
     /**

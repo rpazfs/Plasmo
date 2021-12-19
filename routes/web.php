@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PasienController;
+use App\Http\Controllers\PendonorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,6 +62,7 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::view('/user-profile', "pages.pasien.user-profile")->name('user-profile');
     Route::view('/change-password', "pages.pasien.change-password")->name('change-password');
     Route::view('/change-email', "pages.pasien.change-email")->name('change-email');
+    Route::post('submit', [PasienController::class,'store']);
 
     //Route for pendonor
     Route::view('/dashboard-pendonor', "pages.pendonor.dashboard-pendonor")->name('dashboard-pendonor');
@@ -70,6 +73,7 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::view('/user-profile-pendonor', "pages.pendonor.user-profile")->name('user-profile');
     Route::view('/change-password-pendonor', "pages.pendonor.change-password")->name('change-password');
     Route::view('/change-email-pendonor', "pages.pendonor.change-email")->name('change-email');
+    Route::post('submit', [PendonorController::class,'store']);
 
     Route::get('/user', [ UserController::class, "index_view" ])->name('user');
     Route::view('/user/new', "pages.user.user-new")->name('user.new');
