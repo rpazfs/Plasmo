@@ -88,4 +88,5 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::get('/user', [ UserController::class, "index" ])->name('user');
     Route::view('/user/new', "pages.user.user-new")->name('user.new');
     Route::view('/user/edit/{userId}', "pages.user.user-edit")->name('user.edit');
+    Route::view('/dashboard-admin', "pages.user.dashboard-admin")->name('dashboard.admin');
 });
