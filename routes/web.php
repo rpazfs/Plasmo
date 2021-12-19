@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('home');
 });
 
+
 Route::get('/tentang-kami', function () {
     return view('tentang-kami');
 });

@@ -12,42 +12,7 @@
   </head>
   <body>
     <header class="container">
-        <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between">
-            <a class="navbar-brand" href="#"><img src="{{asset('/images/logo.png')}}" alt="logo Plasmo"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul class="navbar-nav ml-auto mr-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" href="/dashboard-pendonor">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/stok-plasma-pendonor">Stok Plasma</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="/berita">Berita & Informasi</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/faq">FAQ</a>
-                </li>
-              </ul>
-              <div class="form-inline my-2 my-lg-0">                
-                <div class="user-image mr-2">
-                    <a href="/dashboard"><img src="{{asset('/images/user.png')}}" alt="gambar user"></a>                    
-                </div>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-secondary dropdown-toggle" style="color: #122D74; background-color: white; border: 0;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a href="/dashboard"><button class="dropdown-item" type="button">Dashboard</button>  </a>                    
-                        <a href="/user-profile"><button class="dropdown-item" type="button">Pengaturan Akun</button></a>
-                        <button class="dropdown-item" type="button">Notifikasi</button>
-                        <button class="dropdown-item" type="button">Keluar</button>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </nav>
+        @include('components.navbar-pendonor')
     </header>
 
     <main>
