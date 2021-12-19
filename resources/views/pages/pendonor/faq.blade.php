@@ -12,7 +12,7 @@
   </head>
   <body>
     <header class="container">
-        @include('components.navbar-pendonor')
+        @include('components.navbar-login')
     </header>
 
     <main>
@@ -111,7 +111,7 @@
         </section>        
     </main>
 
-    @include('components.footer-pendonor')
+    @include('components.footer-login')
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -14,11 +14,8 @@ class PendonorController extends Controller
      */
     public function index()
     {
-        abort_if(Gate::denies('pendonor_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $pendonor = Pendonor::all();
-
-        return view('pendonor.index', compact('pendonor'));
+        return view('pendonor.dashboard-pendonor');
     }
 
     /**

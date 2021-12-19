@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -14,12 +15,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([
-            PermissionsTableSeeder::class,
-            RoleTableSeeder::class,
-            PermissionRoleTableSeeder::class,
-            UsersTableSeeder::class,
-            RoleUserTableSeeder::class,
-        ]);
+        $this->call(RoleSeeder::class);
     }
 }

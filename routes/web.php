@@ -48,7 +48,17 @@ Route::get('/daftar-pendonor', function () {
     return view('daftar-pendonor');
 });
 
-
+Route::group(['middleware' => 'auth'], function() {
+    Route::group(['middleware' => 'role:Pencari Donor', 'prefix' => 'Pencari Donor', 'as' => 'Pencari Donor.'], function() {
+        Route::resource('dashboard', \App\Http\Controllers\PasienController::class);
+    });
+   Route::group(['middleware' => 'role:Pendonor', 'prefix' => 'Pendonor', 'as' => 'Pendonor.'], function() {
+       Route::resource('dashboard', \App\Http\Controllers\PendonorController::class);
+   });
+    Route::group(['middleware' => 'role:admin', 'prefix' => 'admin', 'as' => 'admin.'], function() {
+        Route::resource('users', \App\Http\Controllers\Admin\UserController::class);
+    });
+});
 
 
 Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {

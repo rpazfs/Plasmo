@@ -5,12 +5,26 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav ml-auto mr-auto mt-2 mt-lg-0">
-                <li class="nav-item {{Request::is('dashboard') ? 'active':''}}">
-                  <a class="nav-link" href="/dashboard">Dashboard <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item {{Request::is('stok-plasma-donor') ? 'active':''}}">
-                  <a class="nav-link" href="/stok-plasma-donor">Stok Plasma</a>
-                </li>
+
+                    @if (auth()->user()->role_id == 2)
+                      <li class="nav-item {{Request::is('dashboard') ? 'active':''}}">
+                        <a class="nav-link" href="/dashboard">Dashboard <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item {{Request::is('stok-plasma-donor') ? 'active':''}}">
+                        <a class="nav-link" href="/stok-plasma-donor">Stok Plasma</a>
+                      </li>
+                    @endif
+
+                    @if (auth()->user()->role_id == 3)
+                      <li class="nav-item {{Request::is('dashboard-pendonor') ? 'active':''}}">
+                        <a class="nav-link" href="/dashboard-pendonor">Dashboard <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item {{Request::is('stok-plasma-pendonor') ? 'active':''}}">
+                        <a class="nav-link" href="/stok-plasma-pendonor">Stok Plasma</a>
+                      </li>
+                    @endif
+                
+                
                 <li class="nav-item {{Request::is('berita') ? 'active':''}}">
                     <a class="nav-link" href="/berita">Berita & Informasi</a>
                 </li>
