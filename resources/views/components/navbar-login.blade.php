@@ -7,6 +7,9 @@
               <ul class="navbar-nav ml-auto mr-auto mt-2 mt-lg-0">
 
                     @if (auth()->user()->role_id == 1)
+                      <li class="nav-item {{Request::is('dashboard-admin') ? 'active':''}}">
+                        <a class="nav-link" href="/dashboard-admin">Dashboard <span class="sr-only">(current)</span></a>
+                      </li>
                       <li class="nav-item {{Request::is('user') ? 'active':''}}">
                         <a class="nav-link" href="/user">Users <span class="sr-only">(current)</span></a>
                       </li>

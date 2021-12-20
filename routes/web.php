@@ -63,6 +63,8 @@ Route::group(['middleware' => 'auth'], function() {
 
 Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
 
+    Route::view('/welcome', "welcome")->name('welcome');
+
     //Route for pasien
     Route::view('/dashboard', "pages.pasien.dashboard")->name('dashboard');    
     Route::view('/stok-plasma-donor', "pages.pasien.stok-plasma-donor")->name('stok-plasma-donor');    
