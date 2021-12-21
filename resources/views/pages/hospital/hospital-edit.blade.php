@@ -10,6 +10,6 @@
     </x-slot>
 
     <div>
-        <livewire:create-hospital action="updateHospital" :hospitalId="request()->hospitaId" />
+        <livewire:create-hospital action="updateHospital" :hospitalId="request()->hospitalId" />
     </div>
 </x-app-layout>
