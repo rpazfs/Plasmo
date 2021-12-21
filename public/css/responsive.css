@@ -2,6 +2,12 @@
     .container{
         padding: 0 !important;
     }
+    .hero{
+        text-align: center;
+    }
+    .hero p{
+        width: 100% !important;
+    }
     .hero-section{
         flex-direction: column-reverse;
         padding:0 !important;
@@ -68,6 +74,9 @@
     .contacts{
         margin-left: 0rem !important;
         margin-top: 25px;
+    }
+    .dashboard{
+        flex-direction: column;
     }
 }
 
