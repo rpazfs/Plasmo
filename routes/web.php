@@ -90,7 +90,7 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::post('submit', [PendonorController::class,'store']);
     Route::post('submit', [HospitalController::class,'store']);
 
-    Route::get('/stok-plasma-pendonor', [PendonorController::class, 'show'])->name('pendonor');
+    
     Route::get('/stok-plasma-donor', [PendonorController::class, 'showPendonor'])->name('pendonor');
     Route::get('/user', [ UserController::class, "index" ])->name('user');
     Route::view('/user/new', "pages.user.user-new")->name('user.new');
@@ -99,5 +99,10 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
 
     Route::get('/hospital', [ HospitalController::class, "show" ])->name('hospital');
     Route::view('/hospital/new', "pages.hospital.hospital-new")->name('hospital.new');
-    Route::view('/hospital/edit/{userId}', "pages.hospital.hospital-edit")->name('hospital.edit');
+    Route::view('/hospital/edit/{hospitalId}', "pages.hospital.hospital-edit")->name('hospital.edit');
+
+    Route::get('/stok-plasma-pendonor', [ HospitalController::class, "showHospital" ])->name('hospital');
+    Route::get('/stok-plasma-donor', [ HospitalController::class, "showHospitalPasien" ])->name('hospital');
+    Route::get('/list-pendonor', [PendonorController::class, 'show'])->name('pendonor');
+    
 });

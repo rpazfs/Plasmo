@@ -34,17 +34,9 @@
                                 <td class="text-center">
                                     {{$data['hotline']}}
                                 </td>
-                                <td class="d-flex">
-                                    <a href="#">
-                                        <div class="icon-telepon align-self-center mr-3" style="background-color: #31BA45; padding: 5px 10px;">
-                                            <i class="fa fa-phone" style="color: white;"></i>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="icon-email align-self-center mr-3" style="background-color: #2A7DF5; padding: 5px 9px;">
-                                            <i class="fa fa-envelope" style="color: white;"></i>
-                                        </div>
-                                    </a>
+                                <td class="whitespace-no-wrap row-action--icon">
+                                    <a role="button" href="/hospital/edit/{{ $data->id }}" class="mr-3"><i class="fa fa-16px fa-pen"></i></a>
+                                    <a role="button" x-on:click.prevent="deleteItem" href="#"><i class="fa fa-16px fa-trash text-red-500"></i></a>
                                 </td>
                               </tr>
                             @endforeach

@@ -56,6 +56,18 @@ class HospitalController extends Controller
         return view('pages.hospital.hospital-data', ['hospitals'=>$data]);
     }
 
+    public function showHospital(Hospital $hospital)
+    {
+        $data= Hospital::All();
+        return view('pages.pendonor.stok-plasma-pendonor', ['hospitals'=>$data]);
+    }
+
+    public function showHospitalPasien(Hospital $hospital)
+    {
+        $data= Hospital::All();
+        return view('pages.pasien.stok-plasma-donor', ['hospitals'=>$data]);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

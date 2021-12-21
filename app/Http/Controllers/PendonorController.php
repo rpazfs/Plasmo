@@ -77,13 +77,7 @@ class PendonorController extends Controller
     public function show(Pendonor $pendonor)
     {
         $data= Pendonor::All();
-        return view('pages.pendonor.stok-plasma-pendonor', ['pendonors'=>$data]);
-    }
-
-    public function showPendonor(Pendonor $pendonor)
-    {
-        $data= Pendonor::All();
-        return view('pages.pasien.stok-plasma-donor', ['pendonors'=>$data]);
+        return view('pages.pendonor.list-pendonor', ['pendonors'=>$data]);
     }
 
     /**

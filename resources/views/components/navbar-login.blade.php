@@ -26,6 +26,9 @@
                       <li class="nav-item {{Request::is('stok-plasma-donor') ? 'active':''}}">
                         <a class="nav-link" href="/stok-plasma-donor">Stok Plasma</a>
                       </li>
+                      <li class="nav-item {{Request::is('list-pendonor') ? 'active':''}}">
+                        <a class="nav-link" href="/list-pendonor">List Pendonor</a>
+                      </li>
                       <li class="nav-item {{Request::is('berita') ? 'active':''}}">
                           <a class="nav-link" href="/berita">Berita & Informasi</a>
                       </li>
@@ -40,6 +43,9 @@
                       </li>
                       <li class="nav-item {{Request::is('stok-plasma-pendonor') ? 'active':''}}">
                         <a class="nav-link" href="/stok-plasma-pendonor">Stok Plasma</a>
+                      </li>
+                      <li class="nav-item {{Request::is('list-pendonor') ? 'active':''}}">
+                        <a class="nav-link" href="/list-pendonor">List Pendonor</a>
                       </li>
                       <li class="nav-item {{Request::is('berita') ? 'active':''}}">
                           <a class="nav-link" href="/berita">Berita & Informasi</a>

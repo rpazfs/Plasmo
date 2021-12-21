@@ -19,23 +19,25 @@
     <main>
         <section class="hero">
             <article class="hero text-center pt-5 pb-5 container">
-                <h1>Stok Plasma</h1>
-                <p>Stok plasma darah yang terdapat di daerah sekitar anda</p>
+                <h1>Daftar Pendonor</h1>
+                <p>Daftar pendonor yang terdapat di daerah sekitar anda</p>
             </article>
         </section>
         <section class="daftar-rs">
             <article class="daftar-rs pb-5 d-flex flex-column container">
                 <div class="daftar-upper mr-3 d-flex" style="width: 100%;">
-                    <h3 class="mr-auto align-self-center" style="font-size: 24px !important;">Daftar Rumah Sakit</h3>
+                    <h3 class="mr-auto align-self-center" style="font-size: 24px !important;">Daftar Pendonor</h3>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-tulisan">Tempat Stok Donor</button>
+                        <button type="button" class="btn btn-tulisan">Golongan Darah</button>
                         <button type="button" class="btn dropdown-action dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <span class="sr-only">Toggle Dropdown</span>
                         </button>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Rumah Sakit</a>
-                          <a class="dropdown-item" href="#">UDD</a>
-                          <a class="dropdown-item" href="#">Puskesmas</a>
+                          <a class="dropdown-item" href="#">Semua</a>
+                          <a class="dropdown-item" href="#">A</a>
+                          <a class="dropdown-item" href="#">B</a>
+                          <a class="dropdown-item" href="#">O</a>
+                          <a class="dropdown-item" href="#">AB</a>
                         </div>
                     </div>
                     <div class="btn-group ml-5">
@@ -50,60 +52,49 @@
                         </div>
                     </div>
                 </div>
-                <div class="content card-rs d-flex mt-5">
-                @foreach($hospitals as $data)
-                    <article class="rumah-sakit-content mr-3 d-flex flex-column">                    
-                        <div class="upper d-flex">
-                            <img src="{{asset('/images/rumah-sakit.png')}}" alt="rumah sakit" width="200px">
-                            <div class="rumah-sakit-upper align-self-center ml-5">
-                                <h3 class="mb-3"><b>Rumah Sakit {{$data['name']}}</b></h3>
-                                <p style="line-height: 100%;">Lokasi : {{$data['address']}} </p>
-                                <p style="line-height: 100%;">Hotline : {{$data['hotline']}} </p>
-                                <button><i class="fa fa-map mt-2">   Lihat Melalui Maps</i></button>
-                            </div>
-                        </div>
-                        <div class="downer mt-3 d-flex flex-column">
-                            <h3 style="font-size: 14px !important;">Stok Plasma Darah:</h3>
-                            <div class="golongan-darah d-flex flex-wrap">
-                                <div class="gol">
-                                    <h4 style="font-size: 14px !important;">Tipe Darah A+</h4>
-                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: 3</p>
-                                </div>
-                                <div class="gol">
-                                    <h4 style="font-size: 14px !important;">Tipe Darah B+</h4>
-                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: 3</p>
-                                </div>
-                                <div class="gol">
-                                    <h4 style="font-size: 14px !important;">Tipe Darah O+</h4>
-                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: 3</p>
-                                </div>
-                                <div class="gol">
-                                    <h4 style="font-size: 14px !important;">Tipe Darah AB+</h4>
-                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: 3</p>
-                                </div>
-                                <div class="gol">
-                                    <h4 style="font-size: 14px !important;">Tipe Darah A-</h4>
-                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: 3</p>
-                                </div>                                
-                                <div class="gol">
-                                    <h4 style="font-size: 14px !important;">Tipe Darah B-</h4>
-                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: 3</p>
-                                </div>                                
-                                <div class="gol">
-                                    <h4 style="font-size: 14px !important;">Tipe Darah O-</h4>
-                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: 3</p>
-                                </div>                                
-                                <div class="gol">
-                                    <h4 style="font-size: 14px !important;">Tipe Darah AB-</h4>
-                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: 3</p>
-                                </div>
-                            </div>
-                            <a class="mt-4 align-self-center" href="/pendonor">
-                                <button type="button" class="primary-btn">Donor Plasma</button>
-                            </a>                                                          
-                        </div>   
-                    </article>                    
-                    @endforeach
+                <div class="content-pendonor mt-5" style="background-color: white;">
+                    <div class="table px-3" style="background-color: white;">
+                        <table class="table">
+                            <thead>
+                              <tr style="color: #121F44; font-family: 'Heebo';">
+                                <th scope="col">No</th>
+                                <th scope="col" class="text-center">Nama Pendonor</th>
+                                <th scope="col" class="text-center">Golongan Darah</th>
+                                <th scope="col" class="text-center">Lokasi</th>
+                                <th scope="col" class="text-center">Kontak</th>
+                              </tr>
+                            </thead>
+                            <tbody style="font-family: 'Montserrat';">
+                            @foreach($pendonors as $data)
+                              <tr>
+                                <th scope="row">
+                                    {{$data['id']}}
+                                </th>
+                                <td class="text-center">
+                                    {{$data['nama_pendonor']}}
+                                </td>
+                                <td class="text-center">
+                                    {{$data['blood_type']}}
+                                </td>
+                                <td class="text-center">
+                                    {{$data['city']}} 
+                                </td>
+                                <td class="d-flex">
+                                    <a href="#">
+                                        <div class="icon-telepon align-self-center mr-3" style="background-color: #31BA45; padding: 5px 10px;">
+                                            <i class="fa fa-phone" style="color: white;"></i>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="icon-email align-self-center mr-3" style="background-color: #2A7DF5; padding: 5px 9px;">
+                                            <i class="fa fa-envelope" style="color: white;"></i>
+                                        </div>
+                                    </a>
+                                </td>
+                              </tr>
+                            @endforeach
+                          </table>
+                    </div>                    
                 </div>
                 <div class="daftar-downer mt-5 d-flex justify-content-between">
                     <div class="btn-group align-self-center">
@@ -112,9 +103,9 @@
                           <span class="sr-only">Toggle Dropdown</span>
                         </button>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">2 Rumah Sakit</a>
-                          <a class="dropdown-item" href="#">4 Rumah Sakit</a>
-                          <a class="dropdown-item" href="#">6 Rumah Sakit</a>
+                          <a class="dropdown-item" href="#">2 Pendonor</a>
+                          <a class="dropdown-item" href="#">4 Pendonor</a>
+                          <a class="dropdown-item" href="#">6 Pendonor</a>
                         </div>
                     </div>
                     <nav aria-label="Page navigation align-self-center">
@@ -136,7 +127,7 @@
                               </li>
                             </ul>
                     </nav>
-                    <p class="align-self-center" style="font-size: 12px !important; margin-bottom: 0 !important;">Total Rumah Sakit : <span style="color: #122D74;">6</span></p>
+                    <p class="align-self-center" style="font-size: 12px !important; margin-bottom: 0 !important;">Total Pendonor : <span style="color: #122D74;">12</span></p>
                 </div>
             </article>
         </section>
