@@ -14,7 +14,8 @@ class HospitalController extends Controller
      */
     public function index()
     {
-        //
+        $hospital = Hospital::all();
+        return view('pages.hospital.hospital-data', $hospital);
     }
 
     /**
@@ -35,7 +36,13 @@ class HospitalController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $hospital = new Hospital();
+        $hospital->name = $request->name;
+        $hospital->address = $request->address;
+        $hospital->hotline = $request->hotline;
+        $hospital->save();
+      
+        return $hospital;
     }
 
     /**
@@ -69,7 +76,13 @@ class HospitalController extends Controller
      */
     public function update(Request $request, Hospital $hospital)
     {
-        //
+        $hospital = Hospital::find($id);
+        $hospital->name = $request->name;
+        $hospital->address = $request->address;
+        $hospital->hotline = $request->hotline;
+        $hospital->update();
+      
+        return $hospital;
     }
 
     /**
@@ -80,6 +93,8 @@ class HospitalController extends Controller
      */
     public function destroy(Hospital $hospital)
     {
-        //
+        $hospital = Hospital::find($id);
+        $hospital->delete();
+        return "hospital with id " . $id . " deleted";
     }
 }
