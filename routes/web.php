@@ -88,7 +88,7 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::view('/change-email-pendonor', "pages.pendonor.change-email")->name('change-email');
 
     Route::post('submit', [PendonorController::class,'store']);
-    Route::post('submit', [HospitalController::class,'store']);
+    Route::post('/hospital/submit', [HospitalController::class,'store']);
 
     
     Route::get('/stok-plasma-donor', [PendonorController::class, 'showPendonor'])->name('pendonor');
