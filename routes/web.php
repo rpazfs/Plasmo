@@ -4,6 +4,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PasienController;
 use App\Http\Controllers\PendonorController;
+use App\Http\Controllers\HospitalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -85,7 +86,9 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::view('/user-profile-pendonor', "pages.pendonor.user-profile")->name('user-profile');
     Route::view('/change-password-pendonor', "pages.pendonor.change-password")->name('change-password');
     Route::view('/change-email-pendonor', "pages.pendonor.change-email")->name('change-email');
+
     Route::post('submit', [PendonorController::class,'store']);
+    Route::post('submit', [HospitalController::class,'store']);
 
     Route::get('/stok-plasma-pendonor', [PendonorController::class, 'show'])->name('pendonor');
     Route::get('/stok-plasma-donor', [PendonorController::class, 'showPendonor'])->name('pendonor');
@@ -93,4 +96,8 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::view('/user/new', "pages.user.user-new")->name('user.new');
     Route::view('/user/edit/{userId}', "pages.user.user-edit")->name('user.edit');
     Route::view('/dashboard-admin', "pages.user.dashboard-admin")->name('dashboard.admin');
+
+    Route::get('/hospital', [ HospitalController::class, "show" ])->name('hospital');
+    Route::view('/hospital/new', "pages.hospital.hospital-new")->name('hospital.new');
+    Route::view('/hospital/edit/{userId}', "pages.hospital.hospital-edit")->name('hospital.edit');
 });

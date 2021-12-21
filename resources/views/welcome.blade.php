@@ -25,7 +25,7 @@
                             @if (auth()->user()->role_id == 1)
                                 <a href="/dashboard-admin"><button type="button" class="primary-btn mr-3"><i class="fa fa-dashboard mr-3" style="font-size:20px;color:white;"></i>Dashboard</button></a>
                                 <a href="/user"><button type="button" class="primary-btn mr-3"><i class='fa fa-user mr-3' style='font-size:20px;color:white;'></i>Users</button></a>
-                                <a href="/rumah-sakit"><button type="button" class="primary-btn"><i class='	fa fa-h-square mr-3' style='font-size:20px;color:white;'></i>Rumah Sakit</button></a>
+                                <a href="/hospital"><button type="button" class="primary-btn"><i class='	fa fa-h-square mr-3' style='font-size:20px;color:white;'></i>Rumah Sakit</button></a>
                             @endif
 
                             @if (auth()->user()->role_id == 2)        
