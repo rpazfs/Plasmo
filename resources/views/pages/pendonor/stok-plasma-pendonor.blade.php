@@ -225,7 +225,46 @@
                 </div>
                 <div class="content-pendonor mt-5" style="background-color: white;">
                     <div class="table px-3" style="background-color: white;">
-                        <livewire:table.main name="pendonor" :model="$pendonor" />
+                        <table class="table">
+                            <thead>
+                              <tr style="color: #121F44; font-family: 'Heebo';">
+                                <th scope="col">No</th>
+                                <th scope="col" class="text-center">Nama Pendonor</th>
+                                <th scope="col" class="text-center">Golongan Darah</th>
+                                <th scope="col" class="text-center">Lokasi</th>
+                                <th scope="col" class="text-center">Kontak</th>
+                              </tr>
+                            </thead>
+                            <tbody style="font-family: 'Montserrat';">
+                            @foreach($pendonors as $data)
+                              <tr>
+                                <th scope="row">
+                                    {{$data['id']}}
+                                </th>
+                                <td class="text-center">
+                                    {{$data['nama_pendonor']}}
+                                </td>
+                                <td class="text-center">
+                                    {{$data['blood_type']}}
+                                </td>
+                                <td class="text-center">
+                                    {{$data['city']}} 
+                                </td>
+                                <td class="d-flex">
+                                    <a href="#">
+                                        <div class="icon-telepon align-self-center mr-3" style="background-color: #31BA45; padding: 5px 10px;">
+                                            <i class="fa fa-phone" style="color: white;"></i>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="icon-email align-self-center mr-3" style="background-color: #2A7DF5; padding: 5px 9px;">
+                                            <i class="fa fa-envelope" style="color: white;"></i>
+                                        </div>
+                                    </a>
+                                </td>
+                              </tr>
+                            @endforeach
+                          </table>
                     </div>                    
                 </div>
                 <div class="daftar-downer mt-5 d-flex justify-content-between">

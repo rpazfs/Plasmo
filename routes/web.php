@@ -78,7 +78,7 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
 
     //Route for pendonor
     Route::view('/dashboard-pendonor', "pages.pendonor.dashboard-pendonor")->name('dashboard-pendonor');
-    Route::view('/stok-plasma-pendonor', "pages.pendonor.stok-plasma-pendonor")->name('stok-plasma-pendonor');
+    // Route::view('/stok-plasma-pendonor', "pages.pendonor.stok-plasma-pendonor")->name('stok-plasma-pendonor');
     Route::view('/pendonor', "pages.pendonor.pendonor")->name('pendonor');
     Route::view('/faq-pendonor', "pages.pendonor.faq")->name('faq');
     Route::view('/berita-pendonor', "pages.pendonor.berita")->name('berita');
@@ -86,8 +86,9 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::view('/change-password-pendonor', "pages.pendonor.change-password")->name('change-password');
     Route::view('/change-email-pendonor', "pages.pendonor.change-email")->name('change-email');
     Route::post('submit', [PendonorController::class,'store']);
-    Route::get('pendonor', [PendonorController::class, 'getPendonor']);
 
+    Route::get('/stok-plasma-pendonor', [PendonorController::class, 'show'])->name('pendonor');
+    Route::get('/stok-plasma-donor', [PendonorController::class, 'showPendonor'])->name('pendonor');
     Route::get('/user', [ UserController::class, "index" ])->name('user');
     Route::view('/user/new', "pages.user.user-new")->name('user.new');
     Route::view('/user/edit/{userId}', "pages.user.user-edit")->name('user.edit');

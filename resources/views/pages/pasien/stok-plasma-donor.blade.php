@@ -225,27 +225,31 @@
                 </div>
                 <div class="content-pendonor mt-5" style="background-color: white;">
                     <div class="table px-3" style="background-color: white;">
-                        <table class="table">
+                    <table class="table">
                             <thead>
                               <tr style="color: #121F44; font-family: 'Heebo';">
                                 <th scope="col">No</th>
-                                <th scope="col">Nama Pendonor</th>
-                                <th scope="col">Golongan Darah</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Waktu</th>
-                                <th scope="col">Kontak</th>
+                                <th scope="col" class="text-center">Nama Pendonor</th>
+                                <th scope="col" class="text-center">Golongan Darah</th>
+                                <th scope="col" class="text-center">Lokasi</th>
+                                <th scope="col" class="text-center">Kontak</th>
                               </tr>
                             </thead>
                             <tbody style="font-family: 'Montserrat';">
+                            @foreach($pendonors as $data)
                               <tr>
-                                <th scope="row">1</th>
-                                <td>
-                                    <img class="gambar-table mr-2" src="{{asset('/images/ico-raja.png')}}" alt="gambar user" >
-                                    Raja Pasha Agastya
+                                <th scope="row">
+                                    {{$data['id']}}
+                                </th>
+                                <td class="text-center">
+                                    {{$data['nama_pendonor']}}
                                 </td>
-                                <td>O+</td>
-                                <td>raja.pasha.rp@gmail.com</td>
-                                <td>12-4-2021</td>
+                                <td class="text-center">
+                                    {{$data['blood_type']}}
+                                </td>
+                                <td class="text-center">
+                                    {{$data['city']}} 
+                                </td>
                                 <td class="d-flex">
                                     <a href="#">
                                         <div class="icon-telepon align-self-center mr-3" style="background-color: #31BA45; padding: 5px 10px;">
@@ -259,73 +263,7 @@
                                     </a>
                                 </td>
                               </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>
-                                    <img class="gambar-table mr-2" src="{{asset('/images/ico-raja.png')}}" alt="gambar user">
-                                    Raja Pasha Agastya
-                                </td>
-                                <td>O+</td>
-                                <td>raja.pasha.rp@gmail.com</td>
-                                <td>12-4-2021</td>
-                                <td class="d-flex">
-                                    <a href="#">
-                                        <div class="icon-telepon align-self-center mr-3" style="background-color: #31BA45; padding: 5px 10px;">
-                                            <i class="fa fa-phone" style="color: white;"></i>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="icon-email align-self-center mr-3" style="background-color: #2A7DF5; padding: 5px 9px;">
-                                            <i class="fa fa-envelope" style="color: white;"></i>
-                                        </div>
-                                    </a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>
-                                    <img class="gambar-table mr-2" src="{{asset('/images/ico-raja.png')}}" alt="gambar user">
-                                    Raja Pasha Agastya
-                                </td>
-                                <td>O+</td>
-                                <td>raja.pasha.rp@gmail.com</td>
-                                <td>12-4-2021</td>
-                                <td class="d-flex">
-                                    <a href="#">
-                                        <div class="icon-telepon align-self-center mr-3" style="background-color: #31BA45; padding: 5px 10px;">
-                                            <i class="fa fa-phone" style="color: white;"></i>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="icon-email align-self-center mr-3" style="background-color: #2A7DF5; padding: 5px 9px;">
-                                            <i class="fa fa-envelope" style="color: white;"></i>
-                                        </div>
-                                    </a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <th scope="row">4</th>
-                                <td>
-                                    <img class="gambar-table mr-2" src="{{asset('/images/ico-raja.png')}}" alt="gambar user">
-                                    Raja Pasha Agastya
-                                </td>
-                                <td>O+</td>
-                                <td>raja.pasha.rp@gmail.com</td>
-                                <td>12-4-2021</td>
-                                <td class="d-flex">
-                                    <a href="#">
-                                        <div class="icon-telepon align-self-center mr-3" style="background-color: #31BA45; padding: 5px 10px;">
-                                            <i class="fa fa-phone" style="color: white;"></i>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="icon-email align-self-center mr-3" style="background-color: #2A7DF5; padding: 5px 9px;">
-                                            <i class="fa fa-envelope" style="color: white;"></i>
-                                        </div>
-                                    </a>
-                                </td>
-                              </tr>
-                            </tbody>
+                            @endforeach
                           </table>
                     </div>                    
                 </div>

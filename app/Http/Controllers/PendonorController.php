@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Pendonor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
+use Symfony\Component\HttpFoundation\Response;
 
 class PendonorController extends Controller
 {
@@ -12,23 +14,12 @@ class PendonorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    use Queueable, SerializesModels;
-
-    public $pendonor;
-    public function __construct(Pendonor $pendonor)
-    {
-        $this->pendonor = $pendonor;
-    }
 
     public function index()
     {
-        return view('pendonor.dashboard-pendonor');
-    }
-
-    public function getPendonor()
-    {
-        $pendonor = Pendonor::all();
-        return view('pages.pendonor.stok-plasma-pendonor', compact('pendonor.stok-plasma-pendonor'));
+        return view('pages.pendonor.stok-plasma-pendonor', [
+            'pendonor' => PendonorController::class
+        ]);
     }
 
     /**
@@ -85,7 +76,14 @@ class PendonorController extends Controller
      */
     public function show(Pendonor $pendonor)
     {
-        //
+        $data= Pendonor::All();
+        return view('pages.pendonor.stok-plasma-pendonor', ['pendonors'=>$data]);
+    }
+
+    public function showPendonor(Pendonor $pendonor)
+    {
+        $data= Pendonor::All();
+        return view('pages.pasien.stok-plasma-donor', ['pendonors'=>$data]);
     }
 
     /**
