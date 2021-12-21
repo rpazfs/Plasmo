@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{{asset('/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/responsive.css')}}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -17,12 +18,12 @@
 
     <main>
         <section class="hero">
-            <article class="hero d-flex pt-5 pb-5 container">
+            <article class="hero d-flex pt-5 pb-5 container hero-section">
                 <div class="hero-content align-self-center" style="width: 50%;">
                     <h3>KITA HADAPI BERSAMA COVID</h3>
                     <h1 class="mt-4">Donorkan Plasma Darah Anda Untuk Membantu Sesama.</h1>
                     <p class="mt-2">Ayo bantu sesama dengan mendonorkan plasma darah anda. Banyak saudara kita yang membutuhkan plasma darah saat ini. Kita hadapi bersama Covid-19 !</p>
-                    <a href="/daftar"><button type="button" class="primary-btn mt-4">Daftar Sekarang</button></a>
+                    <a href="{{ route('register') }}"><button type="button" class="primary-btn mt-4">Daftar Sekarang</button></a>
                 </div>
                 <div class="hero-image">
                     <img src="{{asset('/images/hero-image.png')}}" class="mt-5" width="100%" alt="gambar hero">
@@ -32,7 +33,7 @@
         <section class="container">
             <article class="why-donor pt-5 pb-5 d-flex flex-column">
                 <h1 class="mb-5 text-center">Mengapa Harus Mendonor Plasma Darah ?</h1>
-                <div class="d-flex mb-5">
+                <div class="why d-flex mb-5">
                     <div class="why-image">
                         <img src="{{asset('/images/why-image.png')}}" width="100%" alt="gambar orang bertanya">
                     </div>
@@ -46,7 +47,7 @@
                     </div>
                 </div>
                 <div class="button align-self-center">
-                    <a href="/daftar"><button type="button" class="primary-btn">Daftar Sekarang</button></a>
+                    <a href="{{ route('register') }}"><button type="button" class="primary-btn">Daftar Sekarang</button></a>
                 </div>
             </article>
         </section>
@@ -71,7 +72,7 @@
                             <li>Lebih diutamakan yang pernah mendonorkan darah.</li>
                         </ol>
                     </div>
-                    <a href="/daftar"><button type="button" class="primary-btn-green">Daftar Sekarang</button></a>
+                    <a href="{{ route('register') }}"><button type="button" class="primary-btn-green">Daftar Sekarang</button></a>
                 </div>
             </article>
         </section>

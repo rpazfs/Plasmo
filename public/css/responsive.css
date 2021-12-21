@@ -1,0 +1,107 @@
+@media screen and (max-width: 990px){
+    .container{
+        padding: 0 !important;
+    }
+    .hero-section{
+        flex-direction: column-reverse;
+        padding:0 !important;
+    }
+    .hero-content{
+        width: 100% !important;
+        text-align: center;
+        margin-left: 0rem !important;
+    }
+    .why{
+        flex-direction: column;
+    }
+    .why-content{
+        width: 100% !important;
+        margin-top: 15px !important;
+    }
+    .kriteria-image{
+        display:none;
+    }
+    .tertarik-content{        
+        margin-left: 0rem !important ;
+        padding-left: 0rem !important;
+        text-align: center;
+        width: 100% !important;
+    }
+    .tentang-image img{
+        display: none;
+    }
+    .tentang-image{
+        margin: 0 auto;
+        align-items: center !important;
+    }
+    .tentang-content{
+        margin-left: 0 !important;
+    }
+    .tentang-section{
+        flex-direction: column;
+    }
+    .team{
+        flex-direction: column;
+        text-align: center;
+    }
+    .team-content{
+        width: 100% !important;
+    }
+    .team-kami{
+        align-self: center;
+    }
+    .tertarik-image img{
+        display: none;
+    }
+    .card-rs{
+        flex-direction: column;
+    }
+    .rumah-sakit-content{
+        margin-bottom: 25px;
+    }
+    .kontak-form{
+        flex-direction: column;
+    }
+    .submit-form{
+        width: 100% !important;
+    }
+    .contacts{
+        margin-left: 0rem !important;
+        margin-top: 25px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .team{
+        padding: 0px 25px !important;
+    }
+    .hero-section{
+        padding: 0px 25px !important;
+    }
+    .tentang-section{
+        padding: 0px 25px !important;
+    }
+    .why-donor{
+        padding: 0px 25px !important;
+    }
+    .kriteria{
+        padding: 0px 25px !important;
+    }
+    .footer{
+        padding: 0px 25px !important;
+    }
+    
+}
+
+@media screen and (max-width: 600px){
+    .footer{
+        flex-direction: column;
+        text-align: center;
+    }
+    .team-kami{
+        flex-direction: column;
+    }
+    .raja{
+        margin-top: 25px;
+    }
+}

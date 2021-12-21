@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{{asset('/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/responsive.css')}}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,7 +27,7 @@
             <article class="kontak pb-5 d-flex flex-column container">
                 <h3>Say Hello!</h3>
                 <div class="kontak-form mr-3 d-flex" style="width: 100%;">
-                    <form style="width: 80%;">
+                    <form class="submit-form" style="width: 80%;">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Masukan nama Anda">
                           </div>
@@ -39,7 +40,7 @@
                         </div>
                         <button type="submit" class="primary-btn">Kirim Pesan</button>
                     </form>
-                    <div class="contacts ml-5">
+                    <div class="contacts" style="margin-left:3rem;">
                         <div class="alamat-kontak d-flex">
                             <div class="icon-alamat align-self-center mr-3">
                                 <i class="fa fa-map"></i>
@@ -88,12 +89,12 @@
                 <div class="tertarik-image align-self-end ml-5">
                     <img src="{{asset('/images/tertarik.png')}}" width="80%" alt="">
                 </div>
-                <div class="tertarik-content align-self-center ml-5 pl-5">
+                <div class="tertarik-content align-self-center" style="margin-left:3rem; padding-left:3rem;">
                     <div class="upper pb-3">
                         <h2 style="line-height: 0; color:#063726 !important;">Tertarik menjadi pendonor ?</h2>
                         <p style="line-height: 0;">Daftar dan ikuti semua langkahnya :)</p>
                     </div>
-                    <button type="button" class="primary-btn-green">Daftar Sekarang</button>
+                    <a href="{{ route('register') }}"><button type="button" class="primary-btn-green">Daftar Sekarang</button></a>
                 </div>
             </article>
         </section>

@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{{asset('/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/responsive.css')}}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -49,7 +50,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="content d-flex mt-5">
+                <div class="content card-rs d-flex mt-5">
                     <article class="rumah-sakit-content mr-3">
                         <div class="upper d-flex">
                             <img src="{{asset('/images/rumah-sakit.png')}}" alt="rumah sakit" width="200px">
@@ -97,8 +98,8 @@
                                 </div>
                             </div>
                             <div class="button mt-4 align-self-center">
-                                <button type="button" class="primary-btn mr-3">Ajukan Permohonan</button>
-                                <button type="button" class="primary-btn-blue-light">Donor Plasma</button>
+                                <a href="{{ route('register') }}"><button type="button" class="primary-btn mr-3">Ajukan Permohonan</button></a>
+                                <a href="{{ route('register') }}"><button type="button" class="primary-btn-blue-light">Donor Plasma</button></a>
                             </div>                            
                         </div>   
                     </article>
@@ -149,8 +150,8 @@
                                 </div>
                             </div>
                             <div class="button mt-4 align-self-center">
-                                <button type="button" class="primary-btn mr-3">Ajukan Permohonan</button>
-                                <button type="button" class="primary-btn-blue-light">Donor Plasma</button>
+                                <a href="{{ route('register') }}"><button type="button" class="primary-btn mr-3">Ajukan Permohonan</button></a>
+                                <a href="{{ route('register') }}"><button type="button" class="primary-btn-blue-light">Donor Plasma</button></a>
                             </div>                            
                         </div>   
                     </article>
@@ -195,12 +196,12 @@
                 <div class="tertarik-image align-self-end ml-5">
                     <img src="{{asset('/images/tertarik.png')}}" width="80%" alt="">
                 </div>
-                <div class="tertarik-content align-self-center ml-5 pl-5">
+                <div class="tertarik-content align-self-center" style="margin-left:3rem; padding-left:3rem;">
                     <div class="upper pb-3">
                         <h2 style="line-height: 0; color:#0e3c57 !important;">Ingin mencari pendonor?</h2>
                         <p style="line-height: 0;">Daftar dan ikuti semua langkahnya :)</p>
                     </div>
-                    <button type="button" class="primary-btn-blue">Daftar Sekarang</button>
+                    <a href="{{ route('register') }}"><button type="button" class="primary-btn-blue">Daftar Sekarang</button></a>
                 </div>
             </article>
         </section>
