@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\HospitalController;
 use Illuminate\Support\Facades\Route;
 
 /*
