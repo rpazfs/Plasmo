@@ -71,6 +71,13 @@ $navigation_links = array_to_object($links);
                             <li class="/berita/new ? 'active' : '' }}"><a class="nav-link" href="/berita/new">Buat Berita</a></li>
                         </ul>
                     </li>
+                    <li class="dropdown {{ ($is_active) ? 'active' : '' }}">
+                        <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-chart-bar"></i>FAQ</a>
+                        <ul class="dropdown-menu">
+                            <li class="/faq ? 'active' : '' }}"><a class="nav-link" href="/faq">Data FAQ</a></li>
+                            <li class="/faq/new ? 'active' : '' }}"><a class="nav-link" href="/faq/new">Buat FAQ</a></li>
+                        </ul>
+                    </li>
                 @endforeach
             @endif
         </ul>

@@ -34,46 +34,19 @@
                     </div>
                 </div>
                 <div class="content d-flex mt-5 flex-column">
-                    <article class="rumah-sakit-content mb-4">
+                    @foreach ($faqs as $data)
+                    <article class="rumah-sakit-content mb-4 d-flex flex-column">
                         <div class="upper d-flex justify-content-between">    
                             <div class="isi mt-3 mb-3">
-                                <p style="margin-bottom: 0 !important; font-size: 18px !important;">Apa kriteria untuk menjadi pendonor?</p>
-                            </div>     
-                            <a href="#" class="align-self-center" style="color: #122D74 !important; font-weight: bold;">Baca lebih lanjut</a>
+                                <p style="margin-bottom: 0 !important; font-size: 18px !important;">{{$data['pertanyaan']}}</p>
+                            </div>
+                            <button type="button" id="show" onclick="showJawaban()" class="primary-btn align-self-center" style="height:max-content;">Jawaban</button>
+                        </div>
+                        <div id="jawaban" class="mt-3">
+                          <p style="margin-bottom: 0 !important; font-size: 16px !important; font-weight:bold;">{{$data['jawaban']}}</p>
                         </div>
                     </article>
-                    <article class="rumah-sakit-content mb-4">
-                        <div class="upper d-flex justify-content-between">    
-                            <div class="isi mt-3 mb-3">
-                                <p style="margin-bottom: 0 !important; font-size: 18px !important;">Apa kriteria untuk menjadi pencari donor ?</p>
-                            </div>     
-                            <a href="#" class="align-self-center" style="color: #122D74 !important; font-weight: bold;">Baca lebih lanjut</a>
-                        </div>
-                    </article>
-                    <article class="rumah-sakit-content mb-4">
-                        <div class="upper d-flex justify-content-between">    
-                            <div class="isi mt-3 mb-3">
-                                <p style="margin-bottom: 0 !important; font-size: 18px !important;">Apakah mengajukan permintaan untuk stok plasma harus bayar ?</p>
-                            </div>     
-                            <a href="#" class="align-self-center" style="color: #122D74 !important; font-weight: bold;">Baca lebih lanjut</a>
-                        </div>
-                    </article>
-                    <article class="rumah-sakit-content mb-4">
-                        <div class="upper d-flex justify-content-between">    
-                            <div class="isi mt-3 mb-3">
-                                <p style="margin-bottom: 0 !important; font-size: 18px !important;">Dimana saya harus mendonorkan plasma darah ?</p>
-                            </div>     
-                            <a href="#" class="align-self-center" style="color: #122D74 !important; font-weight: bold;">Baca lebih lanjut</a>
-                        </div>
-                    </article>
-                    <article class="rumah-sakit-content mb-4">
-                        <div class="upper d-flex justify-content-between">    
-                            <div class="isi mt-3 mb-3">
-                                <p style="margin-bottom: 0 !important; font-size: 18px !important;">Apakah menjadi pendonor akan mendapatkan uang ?</p>
-                            </div>     
-                            <a href="#" class="align-self-center" style="color: #122D74 !important; font-weight: bold;">Baca lebih lanjut</a>
-                        </div>
-                    </article>
+                    @endforeach                    
                 </div>
                 <div class="daftar-downer mt-5 d-flex justify-content-between">
                     <div class="btn-group align-self-center">
@@ -116,6 +89,7 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{asset('/js/faq.js')}}"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

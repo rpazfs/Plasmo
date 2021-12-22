@@ -5,6 +5,10 @@
  style untuk font
 */
 
+#jawaban{
+    display: none;
+}
+
 h1{
     font-family: 'Heebo' !important;
     font-weight: 500 !important;

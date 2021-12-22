@@ -1,11 +1,11 @@
 <x-app-layout>
     <x-slot name="header_content">
-        <h1>{{ __('Data Berita') }}</h1>
+        <h1>{{ __('Data Faq') }}</h1>
 
         <div class="section-header-breadcrumb">
         <div class="breadcrumb-item active"><a href="{{ route('dashboard') }}">Dashboard</a></div>
-            <div class="breadcrumb-item"><a href="#">Berita</a></div>
-            <div class="breadcrumb-item"><a href="{{ route('berita') }}">Data Berita</a></div>
+            <div class="breadcrumb-item"><a href="#">Faq</a></div>
+            <div class="breadcrumb-item"><a href="{{ route('faq') }}">Data Faq</a></div>
         </div>
     </x-slot>
     <div class="table px-3" style="background-color: white;">
@@ -13,25 +13,22 @@
                             <thead>
                               <tr style="color: #121F44; font-family: 'Heebo';">
                                 <th scope="col">No</th>
-                                <th scope="col" class="text-center">Judul Berita</th>
-                                <th scope="col" class="text-center">Isi Berita</th>
+                                <th scope="col" class="text-center">Pertanyaan FAQ</th>
+                                <th scope="col" class="text-center">Jawaban FAQ</th>
                                 <th scope="col" class="text-center">Action</th>
                               </tr>
                             </thead>
                             <tbody style="font-family: 'Montserrat';">
-                            @foreach($beritas as $data)
+                            @foreach($faqs as $data)
                               <tr>
                                 <th scope="row">
                                     {{$data['id']}}
                                 </th>
                                 <td class="text-center">
-                                    {{$data['judul_berita']}}
+                                    {{$data['pertanyaan']}}
                                 </td>
                                 <td class="text-center">
-                                    {{$data['isi_berita']}}
-                                </td>
-                                <td class="text-center">
-                                    {{$data['berita_photo_path']}}
+                                    {{$data['jawaban']}}
                                 </td>
                                 <td class="whitespace-no-wrap row-action--icon">
                                     <a role="button" href="/faq/edit/{{ $data->id }}" class="mr-3"><i class="fa fa-16px fa-pen"></i></a>

@@ -32,8 +32,8 @@
                       <li class="nav-item {{Request::is('berita-donor') ? 'active':''}}">
                           <a class="nav-link" href="/berita-donor">Berita & Informasi</a>
                       </li>
-                      <li class="nav-item {{Request::is('faq') ? 'active':''}}">
-                        <a class="nav-link" href="/faq">FAQ</a>
+                      <li class="nav-item {{Request::is('faq-donor') ? 'active':''}}">
+                        <a class="nav-link" href="/faq-donor">FAQ</a>
                       </li>
                     @endif
 
@@ -50,8 +50,8 @@
                       <li class="nav-item {{Request::is('berita-donor') ? 'active':''}}">
                           <a class="nav-link" href="/berita-donor">Berita & Informasi</a>
                       </li>
-                      <li class="nav-item {{Request::is('faq') ? 'active':''}}">
-                        <a class="nav-link" href="/faq">FAQ</a>
+                      <li class="nav-item {{Request::is('faq-donor') ? 'active':''}}">
+                        <a class="nav-link" href="/faq-donor">FAQ</a>
                       </li>
                     @endif
               </ul>

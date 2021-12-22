@@ -6,6 +6,7 @@ use App\Http\Controllers\PasienController;
 use App\Http\Controllers\PendonorController;
 use App\Http\Controllers\HospitalController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\FaqController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,7 +72,7 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::view('/dashboard', "pages.pasien.dashboard")->name('dashboard');    
     Route::view('/stok-plasma-donor', "pages.pasien.stok-plasma-donor")->name('stok-plasma-donor');    
     Route::view('/permohonan', "pages.pasien.permohonan")->name('permohonan');
-    Route::view('/faq', "pages.pasien.faq")->name('faq');
+    Route::view('/faq-donor', "pages.pasien.faq")->name('faq');
     Route::view('/berita-donor', "pages.pasien.berita")->name('berita');
     Route::view('/user-profile', "pages.pasien.user-profile")->name('user-profile');
     Route::view('/change-password', "pages.pasien.change-password")->name('change-password');
@@ -82,7 +83,7 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::view('/dashboard-pendonor', "pages.pendonor.dashboard-pendonor")->name('dashboard-pendonor');
     // Route::view('/stok-plasma-pendonor', "pages.pendonor.stok-plasma-pendonor")->name('stok-plasma-pendonor');
     Route::view('/pendonor', "pages.pendonor.pendonor")->name('pendonor');
-    Route::view('/faq-pendonor', "pages.pendonor.faq")->name('faq');
+    Route::view('/faq-donor', "pages.pendonor.faq")->name('faq');
     Route::view('/berita-pendonor', "pages.pendonor.berita")->name('berita');
     Route::view('/user-profile-pendonor', "pages.pendonor.user-profile")->name('user-profile');
     Route::view('/change-password-pendonor', "pages.pendonor.change-password")->name('change-password');
@@ -91,6 +92,7 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::post('submit', [PendonorController::class,'store']);
     Route::post('/hospital/submit', [HospitalController::class,'store']);
     Route::post('/berita/submit', [BeritaController::class,'store']);
+    Route::post('/faq/submit', [FaqController::class,'store']);
 
     
     Route::get('/stok-plasma-donor', [PendonorController::class, 'showPendonor'])->name('pendonor');
@@ -113,5 +115,11 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::view('/berita/edit/{beritaId}', "pages.berita.berita-edit")->name('berita.edit');
     Route::get('/berita/delete/{beritaId}', 'App\Http\Controllers\BeritaController@destroy');
     Route::get('/berita-donor', [BeritaController::class, 'showBerita'])->name('berita');
+
+    Route::get('/faq', [ FaqController::class, "show" ])->name('faq');
+    Route::view('/faq/new', "pages.faq.faq-new")->name('faq.new');
+    Route::view('/faq/edit/{faqId}', "pages.faq.faq-edit")->name('faq.edit');
+    Route::get('/faq/delete/{faqId}', 'App\Http\Controllers\FaqController@destroy');
+    Route::get('/faq-donor', [FaqController::class, 'showFaq'])->name('faq');
     
 });

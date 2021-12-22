@@ -20,7 +20,7 @@
                     <label for="text" style="font-weight: bold; font-family: 'Montserrat';">Isi Berita</label>
                     <input type="text" class="form-control" id="isi-berita" name="isi_berita" placeholder="Masukkan isi berita">
                 </div>                   
-                <button type="submit" class="primary-btn mb-2 mt-4" style="width: 100%;">Buat Rumah Sakit</button>
+                <button type="submit" class="primary-btn mb-2 mt-4" style="width: 100%;">Buat Berita</button>
             </form>
         </div>
 </x-app-layout>

@@ -17,14 +17,14 @@
                     <li><a href="/dashboard">Dashboard</a></li>
                     <li><a href="/stok-plasma-donor">Stok Plasma</a></li>
                     <li><a href="/berita-donor">Berita & Informasi</a></li>
-                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/faq-donor">FAQ</a></li>
                 @endif
 
                 @if (auth()->user()->role_id == 3)
                     <li><a href="/dashboard-pendonor">Dashboard</a></li>
                     <li><a href="/stok-plasma-pendonor">Stok Plasma</a></li>
                     <li><a href="/berita-donor">Berita & Informasi</a></li>
-                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/faq-donor">FAQ</a></li>
                 @endif
 
                     
