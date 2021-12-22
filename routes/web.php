@@ -100,6 +100,7 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::get('/hospital', [ HospitalController::class, "show" ])->name('hospital');
     Route::view('/hospital/new', "pages.hospital.hospital-new")->name('hospital.new');
     Route::view('/hospital/edit/{hospitalId}', "pages.hospital.hospital-edit")->name('hospital.edit');
+    Route::get('/hospital/delete/{hospitalId}', 'App\Http\Controllers\HospitalController@destroy');
 
     Route::get('/stok-plasma-pendonor', [ HospitalController::class, "showHospital" ])->name('hospital');
     Route::get('/stok-plasma-donor', [ HospitalController::class, "showHospitalPasien" ])->name('hospital');

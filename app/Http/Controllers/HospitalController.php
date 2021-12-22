@@ -103,10 +103,10 @@ class HospitalController extends Controller
      * @param  \App\Models\Hospital  $hospital
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Hospital $hospital)
+    public function destroy(Hospital $hospital, $id)
     {
         $hospital = Hospital::find($id);
         $hospital->delete();
-        return "hospital with id " . $id . " deleted";
+        return view('pages.hospital.hospital-data');
     }
 }
