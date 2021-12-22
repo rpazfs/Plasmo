@@ -29,8 +29,8 @@
                       <li class="nav-item {{Request::is('list-pendonor') ? 'active':''}}">
                         <a class="nav-link" href="/list-pendonor">List Pendonor</a>
                       </li>
-                      <li class="nav-item {{Request::is('berita') ? 'active':''}}">
-                          <a class="nav-link" href="/berita">Berita & Informasi</a>
+                      <li class="nav-item {{Request::is('berita-donor') ? 'active':''}}">
+                          <a class="nav-link" href="/berita-donor">Berita & Informasi</a>
                       </li>
                       <li class="nav-item {{Request::is('faq') ? 'active':''}}">
                         <a class="nav-link" href="/faq">FAQ</a>
@@ -47,17 +47,13 @@
                       <li class="nav-item {{Request::is('list-pendonor') ? 'active':''}}">
                         <a class="nav-link" href="/list-pendonor">List Pendonor</a>
                       </li>
-                      <li class="nav-item {{Request::is('berita') ? 'active':''}}">
-                          <a class="nav-link" href="/berita">Berita & Informasi</a>
+                      <li class="nav-item {{Request::is('berita-donor') ? 'active':''}}">
+                          <a class="nav-link" href="/berita-donor">Berita & Informasi</a>
                       </li>
                       <li class="nav-item {{Request::is('faq') ? 'active':''}}">
                         <a class="nav-link" href="/faq">FAQ</a>
                       </li>
                     @endif
-
-                
-                
-                
               </ul>
               <div class="form-inline my-2 my-lg-0">                
                 <div class="user-image mr-2">

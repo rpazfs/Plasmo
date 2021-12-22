@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PasienController;
 use App\Http\Controllers\PendonorController;
 use App\Http\Controllers\HospitalController;
+use App\Http\Controllers\BeritaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,7 +72,7 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::view('/stok-plasma-donor', "pages.pasien.stok-plasma-donor")->name('stok-plasma-donor');    
     Route::view('/permohonan', "pages.pasien.permohonan")->name('permohonan');
     Route::view('/faq', "pages.pasien.faq")->name('faq');
-    Route::view('/berita', "pages.pasien.berita")->name('berita');
+    Route::view('/berita-donor', "pages.pasien.berita")->name('berita');
     Route::view('/user-profile', "pages.pasien.user-profile")->name('user-profile');
     Route::view('/change-password', "pages.pasien.change-password")->name('change-password');
     Route::view('/change-email', "pages.pasien.change-email")->name('change-email');
@@ -89,6 +90,7 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
 
     Route::post('submit', [PendonorController::class,'store']);
     Route::post('/hospital/submit', [HospitalController::class,'store']);
+    Route::post('/berita/submit', [BeritaController::class,'store']);
 
     
     Route::get('/stok-plasma-donor', [PendonorController::class, 'showPendonor'])->name('pendonor');
@@ -105,5 +107,11 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::get('/stok-plasma-pendonor', [ HospitalController::class, "showHospital" ])->name('hospital');
     Route::get('/stok-plasma-donor', [ HospitalController::class, "showHospitalPasien" ])->name('hospital');
     Route::get('/list-pendonor', [PendonorController::class, 'show'])->name('pendonor');
+
+    Route::get('/berita', [ BeritaController::class, "show" ])->name('berita');
+    Route::view('/berita/new', "pages.berita.berita-new")->name('berita.new');
+    Route::view('/berita/edit/{beritaId}', "pages.berita.berita-edit")->name('berita.edit');
+    Route::get('/berita/delete/{beritaId}', 'App\Http\Controllers\BeritaController@destroy');
+    Route::get('/berita-donor', [BeritaController::class, 'showBerita'])->name('berita');
     
 });

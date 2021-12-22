@@ -34,71 +34,21 @@
                     </div>
                 </div>
                 <div class="content d-flex mt-5 flex-column">
+                    @foreach ($beritas as $data)
                     <article class="rumah-sakit-content mb-4">
                         <div class="upper d-flex">
                             <img src="{{asset('/images/rumah-sakit.png')}}" alt="rumah sakit" width="200px">
                             <div class="rumah-sakit-upper align-self-center ml-5">
-                                <h3 style="font-size: 28px !important;"><b>Judul Berita</b></h3>
-                                <p style="line-height: 100%;">24 jam yang lalu</p>      
+                                <h3 style="font-size: 28px !important;"><b>{{$data['judul_berita']}}</b></h3>
+                                <p style="line-height: 100%;">{{$data['created_at']}}</p>      
                                 <div class="isi mt-4 mb-3">
-                                    <p style="margin-bottom: 0 !important;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quo ullam aliquam dolor officiis animi quia enim alias inventore est reprehenderit suscipit, provident deleniti velit pariatur deserunt mollitia, dolore nemo.</p>
+                                    <p style="margin-bottom: 0 !important;">{{$data['isi_berita']}}</p>
                                 </div>     
                                 <a href="#" style="color: #122D74 !important; font-weight: bold; margin-top: 10px;">Baca lebih lanjut</a>                     
                             </div>                            
                         </div>
                     </article>
-                    <article class="rumah-sakit-content mb-4">
-                        <div class="upper d-flex">
-                            <img src="{{asset('/images/rumah-sakit.png')}}" alt="rumah sakit" width="200px">
-                            <div class="rumah-sakit-upper align-self-center ml-5">
-                                <h3 style="font-size: 28px !important;"><b>Judul Berita</b></h3>
-                                <p style="line-height: 100%;">24 jam yang lalu</p>      
-                                <div class="isi mt-4 mb-3">
-                                    <p style="margin-bottom: 0 !important;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quo ullam aliquam dolor officiis animi quia enim alias inventore est reprehenderit suscipit, provident deleniti velit pariatur deserunt mollitia, dolore nemo.</p>
-                                </div>     
-                                <a href="#" style="color: #122D74 !important; font-weight: bold; margin-top: 10px;">Baca lebih lanjut</a>                     
-                            </div>                            
-                        </div>
-                    </article>
-                    <article class="rumah-sakit-content mb-4">
-                        <div class="upper d-flex">
-                            <img src="{{asset('/images/rumah-sakit.png')}}" alt="rumah sakit" width="200px">
-                            <div class="rumah-sakit-upper align-self-center ml-5">
-                                <h3 style="font-size: 28px !important;"><b>Judul Berita</b></h3>
-                                <p style="line-height: 100%;">24 jam yang lalu</p>      
-                                <div class="isi mt-4 mb-3">
-                                    <p style="margin-bottom: 0 !important;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quo ullam aliquam dolor officiis animi quia enim alias inventore est reprehenderit suscipit, provident deleniti velit pariatur deserunt mollitia, dolore nemo.</p>
-                                </div>     
-                                <a href="#" style="color: #122D74 !important; font-weight: bold; margin-top: 10px;">Baca lebih lanjut</a>                     
-                            </div>                            
-                        </div>
-                    </article>
-                    <article class="rumah-sakit-content mb-4">
-                        <div class="upper d-flex">
-                            <img src="{{asset('/images/rumah-sakit.png')}}" alt="rumah sakit" width="200px">
-                            <div class="rumah-sakit-upper align-self-center ml-5">
-                                <h3 style="font-size: 28px !important;"><b>Judul Berita</b></h3>
-                                <p style="line-height: 100%;">24 jam yang lalu</p>      
-                                <div class="isi mt-4 mb-3">
-                                    <p style="margin-bottom: 0 !important;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quo ullam aliquam dolor officiis animi quia enim alias inventore est reprehenderit suscipit, provident deleniti velit pariatur deserunt mollitia, dolore nemo.</p>
-                                </div>     
-                                <a href="#" style="color: #122D74 !important; font-weight: bold; margin-top: 10px;">Baca lebih lanjut</a>                     
-                            </div>                            
-                        </div>
-                    </article>
-                    <article class="rumah-sakit-content mb-4">
-                        <div class="upper d-flex">
-                            <img src="{{asset('/images/rumah-sakit.png')}}" alt="rumah sakit" width="200px">
-                            <div class="rumah-sakit-upper align-self-center ml-5">
-                                <h3 style="font-size: 28px !important;"><b>Judul Berita</b></h3>
-                                <p style="line-height: 100%;">24 jam yang lalu</p>      
-                                <div class="isi mt-4 mb-3">
-                                    <p style="margin-bottom: 0 !important;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quo ullam aliquam dolor officiis animi quia enim alias inventore est reprehenderit suscipit, provident deleniti velit pariatur deserunt mollitia, dolore nemo.</p>
-                                </div>     
-                                <a href="#" style="color: #122D74 !important; font-weight: bold; margin-top: 10px;">Baca lebih lanjut</a>                     
-                            </div>                            
-                        </div>
-                    </article>
+                    @endforeach                    
                 </div>
                 <div class="daftar-downer mt-5 d-flex justify-content-between">
                     <div class="btn-group align-self-center">
