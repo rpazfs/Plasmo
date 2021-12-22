@@ -10,6 +10,6 @@
     </x-slot>
 
     <div>
-        <livewire:table.main name="user" :model="$user" />
+        <livewire:create-user action="updateUser" :userId="request()->userId" />
     </div>
 </x-app-layout>
