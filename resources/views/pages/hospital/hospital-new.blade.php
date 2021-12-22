@@ -14,15 +14,15 @@
                 @csrf
                 <div class="form-group">
                     <label for="text" style="font-weight: bold;font-family: 'Montserrat';">Nama Rumah Sakit</label>
-                    <input type="text" class="form-control" id="nama-pendonor" name="name" placeholder="Masukkan Nama Rumah Sakit">
+                    <input type="text" class="form-control" id="nama-rumah-sakit" name="name" placeholder="Masukkan Nama Rumah Sakit">
                 </div>
                 <div class="form-group">
                     <label for="text" style="font-weight: bold; font-family: 'Montserrat';">Alamat Rumah Sakit</label>
-                    <input type="text" class="form-control" id="no-hp-pendonor" name="address" placeholder="Masukkan Alamat Rumah Sakit">
+                    <input type="text" class="form-control" id="address" name="address" placeholder="Masukkan Alamat Rumah Sakit">
                 </div>
                 <div class="form-group">
                     <label for="number" style="font-weight: bold; font-family: 'Montserrat';">Hotline Rumah Sakit</label>
-                    <input type="number" class="form-control" id="nik" name="hotline" placeholder="Masukkan Hotline Rumah Sakit">
+                    <input type="number" class="form-control" id="hotline" name="hotline" placeholder="Masukkan Hotline Rumah Sakit">
                 </div>
                 <button type="submit" class="primary-btn mb-2 mt-4" style="width: 100%;">Buat Rumah Sakit</button>
             </form>

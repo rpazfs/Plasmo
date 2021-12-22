@@ -38,7 +38,7 @@ class HospitalController extends Controller
     {
         $hospital = new Hospital;
         $hospital->name=$request->name;
-        $hospital->address=$request->adress;
+        $hospital->address=$request->address;
         $hospital->hotline=$request->hotline;
         $hospital->save();
         return redirect('hospital');
