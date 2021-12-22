@@ -24,6 +24,42 @@
                     <label for="number" style="font-weight: bold; font-family: 'Montserrat';">Hotline Rumah Sakit</label>
                     <input type="number" class="form-control" id="hotline" name="hotline" placeholder="Masukkan Hotline Rumah Sakit">
                 </div>
+                <div style="display:flex; flex-direction:row; justify-content: space-between;">
+                    <div class="form-group">
+                        <label for="number" style="font-weight: bold; font-family: 'Montserrat';">Stok Plasma A+</label>
+                        <input type="number" class="form-control" id="stok_plasma_a_positif" name="stok_plasma_a_positif" placeholder="Masukkan Stok Plasma A+">
+                    </div>
+                    <div class="form-group">
+                        <label for="number" style="font-weight: bold; font-family: 'Montserrat';">Stok Plasma A-</label>
+                        <input type="number" class="form-control" id="stok_plasma_a_negatif" name="stok_plasma_a_negatif" placeholder="Masukkan Stok Plasma A-">
+                    </div>
+                    <div class="form-group">
+                        <label for="number" style="font-weight: bold; font-family: 'Montserrat';">Stok Plasma B+</label>
+                        <input type="number" class="form-control" id="stok_plasma_b_positif" name="stok_plasma_b_positif" placeholder="Masukkan Stok Plasma B+">
+                    </div>
+                    <div class="form-group">
+                        <label for="number" style="font-weight: bold; font-family: 'Montserrat';">Stok Plasma B-</label>
+                        <input type="number" class="form-control" id="stok_plasma_b_negatif" name="stok_plasma_b_negatif" placeholder="Masukkan Stok Plasma B-">
+                    </div>
+                </div> 
+                <div style="display:flex; flex-direction:row; justify-content: space-between;">
+                    <div class="form-group">
+                        <label for="number" style="font-weight: bold; font-family: 'Montserrat';">Stok Plasma AB+</label>
+                        <input type="number" class="form-control" id="stok_plasma_ab_positif" name="stok_plasma_ab_positif" placeholder="Masukkan Stok Plasma AB+">
+                    </div>
+                    <div class="form-group">
+                        <label for="number" style="font-weight: bold; font-family: 'Montserrat';">Stok Plasma AB-</label>
+                        <input type="number" class="form-control" id="stok_plasma_ab_negatif" name="stok_plasma_ab_negatif" placeholder="Masukkan Stok Plasma AB-">
+                    </div>
+                    <div class="form-group">
+                        <label for="number" style="font-weight: bold; font-family: 'Montserrat';">Stok Plasma O+</label>
+                        <input type="number" class="form-control" id="stok_plasma_o_positif" name="stok_plasma_o_positif" placeholder="Masukkan Stok Plasma O+">
+                    </div>
+                    <div class="form-group">
+                        <label for="number" style="font-weight: bold; font-family: 'Montserrat';">Stok Plasma O-</label>
+                        <input type="number" class="form-control" id="stok_plasma_o_negatif" name="stok_plasma_o_negatif" placeholder="Masukkan Stok Plasma O-">
+                    </div>
+                </div>                 
                 <button type="submit" class="primary-btn mb-2 mt-4" style="width: 100%;">Buat Rumah Sakit</button>
             </form>
         </div>

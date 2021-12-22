@@ -16,6 +16,14 @@
                                 <th scope="col" class="text-center">Nama Rumah Sakit</th>
                                 <th scope="col" class="text-center">Address</th>
                                 <th scope="col" class="text-center">Hotline</th>
+                                <th scope="col" class="text-center">A+</th>
+                                <th scope="col" class="text-center">A-</th>
+                                <th scope="col" class="text-center">B+</th>
+                                <th scope="col" class="text-center">B-</th>
+                                <th scope="col" class="text-center">AB+</th>
+                                <th scope="col" class="text-center">AB-</th>
+                                <th scope="col" class="text-center">O+</th>
+                                <th scope="col" class="text-center">O-</th>
                                 <th scope="col" class="text-center">Action</th>
                               </tr>
                             </thead>
@@ -33,6 +41,30 @@
                                 </td>
                                 <td class="text-center">
                                     {{$data['hotline']}}
+                                </td>
+                                <td class="text-center">
+                                    {{$data['stok_plasma_a_positif']}}
+                                </td>
+                                <td class="text-center">
+                                    {{$data['stok_plasma_a_negatif']}}
+                                </td>
+                                <td class="text-center">
+                                    {{$data['stok_plasma_b_positif']}}
+                                </td>
+                                <td class="text-center">
+                                    {{$data['stok_plasma_b_negatif']}}
+                                </td>
+                                <td class="text-center">
+                                    {{$data['stok_plasma_ab_positif']}}
+                                </td>
+                                <td class="text-center">
+                                    {{$data['stok_plasma_ab_negatif']}}
+                                </td>
+                                <td class="text-center">
+                                    {{$data['stok_plasma_o_positif']}}
+                                </td>
+                                <td class="text-center">
+                                    {{$data['stok_plasma_o_negatif']}}
                                 </td>
                                 <td class="whitespace-no-wrap row-action--icon">
                                     <a role="button" href="/hospital/edit/{{ $data->id }}" class="mr-3"><i class="fa fa-16px fa-pen"></i></a>

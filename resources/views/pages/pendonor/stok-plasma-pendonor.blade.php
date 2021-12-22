@@ -67,35 +67,35 @@
                             <div class="golongan-darah d-flex flex-wrap">
                                 <div class="gol">
                                     <h4 style="font-size: 14px !important;">Tipe Darah A+</h4>
-                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: 3</p>
+                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: {{$data['stok_plasma_a_positif']}}</p>
                                 </div>
                                 <div class="gol">
                                     <h4 style="font-size: 14px !important;">Tipe Darah B+</h4>
-                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: 3</p>
+                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: {{$data['stok_plasma_b_positif']}}</p>
                                 </div>
                                 <div class="gol">
                                     <h4 style="font-size: 14px !important;">Tipe Darah O+</h4>
-                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: 3</p>
+                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: {{$data['stok_plasma_o_positif']}}</p>
                                 </div>
                                 <div class="gol">
                                     <h4 style="font-size: 14px !important;">Tipe Darah AB+</h4>
-                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: 3</p>
+                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: {{$data['stok_plasma_ab_positif']}}</p>
                                 </div>
                                 <div class="gol">
                                     <h4 style="font-size: 14px !important;">Tipe Darah A-</h4>
-                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: 3</p>
+                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: {{$data['stok_plasma_a_negatif']}}</p>
                                 </div>                                
                                 <div class="gol">
                                     <h4 style="font-size: 14px !important;">Tipe Darah B-</h4>
-                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: 3</p>
+                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: {{$data['stok_plasma_b_negatif']}}</p>
                                 </div>                                
                                 <div class="gol">
                                     <h4 style="font-size: 14px !important;">Tipe Darah O-</h4>
-                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: 3</p>
+                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: {{$data['stok_plasma_o_negatif']}}</p>
                                 </div>                                
                                 <div class="gol">
                                     <h4 style="font-size: 14px !important;">Tipe Darah AB-</h4>
-                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: 3</p>
+                                    <p style="line-height: 0; font-size: 12px !important;">Sisa Stok: {{$data['stok_plasma_ab_negatif']}}</p>
                                 </div>
                             </div>
                             <a class="mt-4 align-self-center" href="/pendonor">

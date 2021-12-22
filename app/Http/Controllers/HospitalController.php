@@ -40,6 +40,14 @@ class HospitalController extends Controller
         $hospital->name=$request->name;
         $hospital->address=$request->address;
         $hospital->hotline=$request->hotline;
+        $hospital->stok_plasma_a_positif=$request->stok_plasma_a_positif;
+        $hospital->stok_plasma_a_negatif=$request->stok_plasma_a_negatif;
+        $hospital->stok_plasma_b_positif=$request->stok_plasma_b_positif;
+        $hospital->stok_plasma_b_negatif=$request->stok_plasma_b_negatif;
+        $hospital->stok_plasma_ab_positif=$request->stok_plasma_ab_positif;
+        $hospital->stok_plasma_ab_negatif=$request->stok_plasma_ab_negatif;
+        $hospital->stok_plasma_o_positif=$request->stok_plasma_o_positif;
+        $hospital->stok_plasma_o_negatif=$request->stok_plasma_o_negatif;
         $hospital->save();
         return redirect('hospital');
     }
@@ -105,8 +113,8 @@ class HospitalController extends Controller
      */
     public function destroy(Hospital $hospital, $id)
     {
-        $hospital = Hospital::find($id);
-        $hospital->delete();
+        $hospitals = Hospital::find($id);
+        $hospitals->delete();
         return view('pages.hospital.hospital-data');
     }
 }
