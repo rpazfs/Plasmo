@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Faq;
+use DB;
 
 class FaqController extends Controller
 {
@@ -57,9 +58,16 @@ class FaqController extends Controller
 
     public function showFaq(Faq $faq)
     {
-        $data= Faq::All();
+        $data= Faq::All();        
         return view('pages.pasien.faq', ['faqs'=>$data]);
     }
+
+    public function countFaq(Faq $faq)
+    {
+        $data= DB::table('faq')->count();
+        return view('pages.pasien.faq', ['faqs'=>$data]);
+    }
+
 
     /**
      * Show the form for editing the specified resource.
