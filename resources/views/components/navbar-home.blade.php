@@ -19,8 +19,8 @@
                 </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
-                    <a href="{{ route('login') }}"><button type="button" class="outline-primary-btn mr-3">Masuk</button></a>
-                    <a href="{{ route('register') }}"><button type="button" class="primary-btn">Daftar</button></a>
+                    <a href="/masuk"><button type="button" class="outline-primary-btn mr-3">Masuk</button></a>
+                    <a href="/daftar"><button type="button" class="primary-btn">Daftar</button></a>
             </form>
             </div>
 </nav>

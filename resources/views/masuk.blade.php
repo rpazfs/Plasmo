@@ -21,26 +21,36 @@
                 <div class="form" style="width: 50%;">
                     <h1>Masuk</h1>
                     <p>Cari stok plasma dan pendonor sesuai kebutuhanmu</p>
-                    <button class="btn-sign mb-3" style="width: 100%;"><i class="fa fa-google mr-3"></i> Masuk Dengan Google</button>
-                    <p style="text-align: center !important;">atau masuk dengan</p>
-                    <form style="width: 100%;">
+
+                    <x-jet-validation-errors class="mb-4" />
+                    @if (session('status'))
+                        <div class="mb-4">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+                    <form style="width: 100%;" method="POST" action="{{ route('login') }}">
+                    @csrf
                         <div class="form-group">
                             <label for="email" style="font-weight: bold; color: #122D74; font-family: 'Montserrat';">Email</label>
-                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Masukkan Email Anda">
+                            <input type="email" class="form-control" type="email" name="email" :value="old('email')" required autofocus placeholder="Masukkan Email Anda">
                         </div>
                         <div class="form-group">
                             <label for="email" style="font-weight: bold; color: #122D74; font-family: 'Montserrat';">Password</label>
-                            <input type="password" class="form-control" placeholder="Masukkan Password Anda" id="password">
+                            <input type="password" class="form-control" placeholder="Masukkan Password Anda" id="password" name="password" required autocomplete="current-password">
                         </div>
                         <div class="form-group justify-content-between d-flex mb-5">
                             <input class="form-check-input" type="checkbox" style="margin-left: 0; margin-top: 6px;" value="" id="remember">
                             <label class="form-check-label" style="margin-left: 20px;" for="remember">
                                 Remember me
                             </label>
-                            <a href="#" style="color: #122D74 !important; font-weight: bold;">Lupa password ?</a>
+                            @if (Route::has('password.request'))
+                                <a style="color: #122D74 !important; font-weight: bold;" href="{{ route('password.request') }}">
+                                    {{ __('Lupa password ?') }}
+                                </a>
+                            @endif
                         </div>
                         <button type="submit" class="primary-btn mb-2" style="width: 100%;" >Masuk</button>
-                        <p>Belum punya akun ? <a href="daftar.html" style="color: #122D74 !important; font-weight: bold;">Daftar disini</a></p>
+                        <p>Belum punya akun ? <a href="/daftar" style="color: #122D74 !important; font-weight: bold;">Daftar disini</a></p>
                     </form>
                 </div>
                 <div class="masuk-image">

@@ -12,39 +12,61 @@
   </head>
   <body>
     <header class="container">
-        @include('components.navbar-home')
+      @include('components.navbar-home')
     </header>
 
     <main>
         <section class="hero">
             <article class="hero pt-5 pb-5 d-flex container">
-                <a style="width: 50%;" href="/daftar-pendonor">
-                    <div class="pendonor d-flex flex-column mx-auto" >
-                        <div class="icon-pendonor align-self-center">
-                            <img src="{{asset('/images/icon-pendonor.png')}}" alt="icon pendonor">
+                <div class="form" style="width: 50%;">
+                    <h1>Daftar Akun</h1>
+                    <p>Cari stok plasma dan pendonor sesuai kebutuhanmu</p>
+                    <form style="width: 100%;" method="POST" action="{{ route('register') }}">
+                    @csrf
+                        <div class="form-group">
+                            <label for="text" style="font-weight: bold; color: #122D74; font-family: 'Montserrat';">Nama</label>
+                            <input type="text" class="form-control" name="name" :value="old('name')" required autofocus autocomplete="name" placeholder="Masukkan Nama Anda">
                         </div>
-                        <div class="pendonor-content text-center mt-5">
-                            <h3>Daftar Sebagai Pendonor</h3>
-                            <p>Dengan menjadi pendonor, anda dapat membantu sesama dan meringankan beban para pasien yang terdampak covid-19. Daftar dan bantu sesama.</p>                        
+                        <div class="form-group">
+                            <label for="email" style="font-weight: bold; color: #122D74; font-family: 'Montserrat';">Email</label>
+                            <input type="email" class="form-control" type="email" name="email" :value="old('email')" required autofocus placeholder="Masukkan Email Anda">
                         </div>
-                    </div>
-                </a>                
-                <a style="width: 50%" href="/daftar-donor">
-                    <div class="donor d-flex flex-column mx-auto">
-                        <div class="icon-donor align-self-center">
-                            <img src="{{asset('/images/icon-donor.png')}}" alt="icon donor">
+                        <div class="form-group">
+                            <label for="email" style="font-weight: bold; color: #122D74; font-family: 'Montserrat';">Password</label>
+                            <input type="password" class="form-control" placeholder="Masukkan Password Anda" id="password" name="password" required autocomplete="current-password">
                         </div>
-                        <div class="donor-content text-center mt-5">
-                            <h3>Daftar Sebagai Pencari Donor</h3>
-                            <p>Anda dapat mengajukan permohonan donor plasma darah sehingga dapat membantu pemulihan anda menggunakan plasma darah.</p>                        
+                        <div class="form-group">
+                            <label for="email" style="font-weight: bold; color: #122D74; font-family: 'Montserrat';">Password Confirmation</label>
+                            <input type="password" class="form-control" placeholder="Masukkan Kembali Password Anda" name="password_confirmation" required autocomplete="new-password">
                         </div>
-                    </div>
-                </a>                
+                        <div style="width:100%;">
+                                <label for="role_id" style="font-weight: bold;font-family: 'Montserrat';">Role Anda</label>
+                                        <select class="custom-select" name="role_id">
+                                            <option selected>Anda ingin mendaftar sebagai?</option>
+                                            <option value="2">Pencari Donor</option>
+                                            <option value="3">Pendonor</option>
+                                        </select>
+                            </div>
+                        <div class="form-group justify-content-between d-flex mb-5">
+                            <input class="form-check-input" type="checkbox" style="margin-left: 0; margin-top: 6px;" value="" id="remember">
+                            <label class="form-check-label" style="margin-left: 20px;" for="remember">
+                                Remember me
+                            </label>
+                        </div>
+                        <button type="submit" class="primary-btn mb-2" style="width: 100%;" >Daftar</button>
+                        <p>Sudah punya akun ? <a href="/masuk" style="color: #122D74 !important; font-weight: bold;">Masuk disini</a></p>
+                    </form>
+                </div>
+                <div class="donor-image align-self-center">
+                    <img src="{{asset('/images/daftar-donor.png')}}" width="100%" alt="gambar">
+                </div>
             </article>
         </section>
     </main>
 
-    @include('components.footer')
+    <footer class="container">
+        <p class="text-center mt-3">Copyrights © 2021 by <span style="color: #122D74; font-weight: bold;">Plasmo</span></p>
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
