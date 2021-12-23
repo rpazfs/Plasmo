@@ -116,6 +116,7 @@ class HospitalController extends Controller
     {
         $hospitals = Hospital::find($id);
         $hospitals->delete();
-        return view('pages.hospital.hospital-data', compact('hospitals'));
+        return redirect('hospital');
+        // return view('pages.hospital.hospital-data', compact('hospitals'));
     }
 }
