@@ -9,9 +9,8 @@
         </div>
     </x-slot>
     <div class="content-settings d-flex flex-column" style="width: 100%;">
-        <form style="width: 100%;" action="submit" method="POST">
+        <form style="width: 100%;" action="{{ url('berita/update', $berita->id ) }}" method="POST">
             @csrf
-            @method('PUT')
             <div class="form-group">
                 <label for="text" style="font-weight: bold;font-family: 'Montserrat';">Judul Berita</label>
                 <input type="text" class="form-control" id="judul-berita" name="judul_berita" value="{{ $berita->judul_berita}}">

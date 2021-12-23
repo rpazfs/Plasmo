@@ -70,8 +70,10 @@ class BeritaController extends Controller
      */
     public function edit($id)
     {
-        $berita = Berita::find($id);
-        return view('pages.berita.berita-edit', compact('berita'));
+        $data = Berita::findOrFail($id);
+        return view('pages.berita.berita-edit', [
+            'berita' => $data
+        ]);
     }
 
     /**
@@ -83,13 +85,8 @@ class BeritaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $berita = Berita::find($id);
-        $berita->judul_berita = $request->judul_berita;
-        $berita->isi_berita = $request->isi_berita;
-        $berita->berita_photo_path = $request->berita_photo_path;
-        $berita->update();
-      
-        return $berita;
+        $berita = Berita::find($id)->update($request->all());
+        return redirect('berita');
     }
 
     /**
@@ -102,6 +99,6 @@ class BeritaController extends Controller
     {
         $berita = Berita::find($id);
         $berita->delete();
-        return view('pages.berita.berita-data');
+        return redirect('berita');
     }
 }
