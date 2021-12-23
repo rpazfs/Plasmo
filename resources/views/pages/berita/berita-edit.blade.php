@@ -14,11 +14,11 @@
             @method('PUT')
             <div class="form-group">
                 <label for="text" style="font-weight: bold;font-family: 'Montserrat';">Judul Berita</label>
-                <input type="text" class="form-control" id="judul-berita" name="judul_berita" value={{ $berita->judul_berita}}>
+                <input type="text" class="form-control" id="judul-berita" name="judul_berita" value="{{ $berita->judul_berita}}">
             </div>
             <div class="form-group">
                 <label for="text" style="font-weight: bold; font-family: 'Montserrat';">Isi Berita</label>
-                <input type="text" class="form-control" id="isi-berita" name="isi_berita" value={{ $berita->isi_berita}}>
+                <input type="text" class="form-control" id="isi-berita" name="isi_berita" value="{{ $berita->isi_berita}}">
             </div>                   
             <button type="submit" class="primary-btn mb-2 mt-4" style="width: 100%;">Buat Berita</button>
         </form>

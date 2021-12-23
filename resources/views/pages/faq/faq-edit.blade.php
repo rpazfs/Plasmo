@@ -14,7 +14,7 @@
             @method('PUT')
             <div class="form-group">
                 <label for="text" style="font-weight: bold;font-family: 'Montserrat';">Pertanyaan FAQ</label>
-                <input type="text" class="form-control" id="judul-faq" name="pertanyaan" value={{$faq->pertanyaan}}>
+                <input type="text" class="form-control" id="judul-faq" name="pertanyaan" value="{{$faq->pertanyaan}}">
             </div>
             <div class="form-group">
                 <label for="text" style="font-weight: bold; font-family: 'Montserrat';">Jawaban FAQ</label>
