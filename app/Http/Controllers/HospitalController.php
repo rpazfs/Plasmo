@@ -87,8 +87,10 @@ class HospitalController extends Controller
 
     public function edit($id)
     {
-        $hospital = Hospital::find($id);
-        return view('pages.hospital.hospital-edit', compact('hospital'));
+        $data = Hospital::findOrFail($id);
+        return view('pages.hospital.hospital-edit', [
+            'hospital' => $data
+        ]);
     }
 
     /**
@@ -100,21 +102,8 @@ class HospitalController extends Controller
      */
     public function update(Request $request, Hospital $hospital, $id)
     {
-        $hospital = Hospital::find($id);
-        $hospital->name=$request->name;
-        $hospital->address=$request->address;
-        $hospital->hotline=$request->hotline;
-        $hospital->stok_plasma_a_positif=$request->stok_plasma_a_positif;
-        $hospital->stok_plasma_a_negatif=$request->stok_plasma_a_negatif;
-        $hospital->stok_plasma_b_positif=$request->stok_plasma_b_positif;
-        $hospital->stok_plasma_b_negatif=$request->stok_plasma_b_negatif;
-        $hospital->stok_plasma_ab_positif=$request->stok_plasma_ab_positif;
-        $hospital->stok_plasma_ab_negatif=$request->stok_plasma_ab_negatif;
-        $hospital->stok_plasma_o_positif=$request->stok_plasma_o_positif;
-        $hospital->stok_plasma_o_negatif=$request->stok_plasma_o_negatif;
-        $hospital->update();
-      
-        return $hospital;
+        $hospital = Hospital::find($id)->update($request->all());
+        return redirect('hospital');
     }
 
     /**

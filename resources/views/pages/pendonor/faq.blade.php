@@ -41,6 +41,7 @@
                             </div>     
                             <a href="#" class="align-self-center" style="color: #122D74 !important; font-weight: bold;">Baca lebih lanjut</a>
                         </div>
+                        
                     </article>
                     <article class="rumah-sakit-content mb-4">
                         <div class="upper d-flex justify-content-between">    
