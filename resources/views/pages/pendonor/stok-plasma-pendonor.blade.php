@@ -59,7 +59,7 @@
                                 <h3 class="mb-3"><b>Rumah Sakit {{$data['name']}}</b></h3>
                                 <p style="line-height: 100%;">Lokasi : {{$data['address']}} </p>
                                 <p style="line-height: 100%;">Hotline : {{$data['hotline']}} </p>
-                                <button><i class="fa fa-map mt-2">   Lihat Melalui Maps</i></button>
+                                <a href="https://www.google.com/maps/place/{{$data['address']}}"><button><i class="fa fa-map mt-2"></i>Lihat Melalui Maps</button></a>
                             </div>
                         </div>
                         <div class="downer mt-3 d-flex flex-column">

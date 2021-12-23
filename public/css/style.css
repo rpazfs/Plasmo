@@ -63,6 +63,10 @@ a{
     background-color: #F9F9F9;
 }
 
+table td, table th{
+    vertical-align:middle !important;
+}
+
 .background-kriteria{
     background-image: url(../images/background-kriteria.png);
     background-size:cover;

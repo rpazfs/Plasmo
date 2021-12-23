@@ -61,7 +61,7 @@
                                 <th scope="col" class="text-center">Nama Pendonor</th>
                                 <th scope="col" class="text-center">Golongan Darah</th>
                                 <th scope="col" class="text-center">Lokasi</th>
-                                <th scope="col" class="text-center">Kontak</th>
+                                <th scope="col">Kontak</th>
                               </tr>
                             </thead>
                             <tbody style="font-family: 'Montserrat';">
@@ -79,15 +79,10 @@
                                 <td class="text-center">
                                     {{$data['city']}} 
                                 </td>
-                                <td class="d-flex">
-                                    <a href="#">
-                                        <div class="icon-telepon align-self-center mr-3" style="background-color: #31BA45; padding: 5px 10px;">
+                                <td>
+                                    <a href="https://wa.me/{{$data['hotline']}}">
+                                        <div class="icon-telepon" style="background-color: #31BA45; padding: 5px 10px;">
                                             <i class="fa fa-phone" style="color: white;"></i>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="icon-email align-self-center mr-3" style="background-color: #2A7DF5; padding: 5px 9px;">
-                                            <i class="fa fa-envelope" style="color: white;"></i>
                                         </div>
                                     </a>
                                 </td>
