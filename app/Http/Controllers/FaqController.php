@@ -75,9 +75,10 @@ class FaqController extends Controller
      * @param  \App\Models\Faq  $faq
      * @return \Illuminate\Http\Response
      */
-    public function edit(Faq $faq)
+    public function edit($id)
     {
-        //
+        $faq = Faq::find($id);
+        return view('pages.faq.faq-edit', compact('faq'));
     }
 
     /**
@@ -87,7 +88,7 @@ class FaqController extends Controller
      * @param  \App\Models\Faq  $faq
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Faq $faq)
+    public function update(Request $request, $id)
     {
         $faq = Faq::find($id);
         $faq->pertanyaan = $request->pertanyaan;

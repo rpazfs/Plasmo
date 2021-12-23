@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Hospital;
 use Illuminate\Http\Request;
+use View;
 
 class HospitalController extends Controller
 {
@@ -82,9 +83,12 @@ class HospitalController extends Controller
      * @param  \App\Models\Hospital  $hospital
      * @return \Illuminate\Http\Response
      */
-    public function edit(Hospital $hospital)
+
+
+    public function edit($id)
     {
-        //
+        $hospital = Hospital::find($id);
+        return view('pages.hospital.hospital-edit', compact('hospital'));
     }
 
     /**
@@ -94,12 +98,20 @@ class HospitalController extends Controller
      * @param  \App\Models\Hospital  $hospital
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Hospital $hospital)
+    public function update(Request $request, Hospital $hospital, $id)
     {
         $hospital = Hospital::find($id);
-        $hospital->name = $request->name;
-        $hospital->address = $request->address;
-        $hospital->hotline = $request->hotline;
+        $hospital->name=$request->name;
+        $hospital->address=$request->address;
+        $hospital->hotline=$request->hotline;
+        $hospital->stok_plasma_a_positif=$request->stok_plasma_a_positif;
+        $hospital->stok_plasma_a_negatif=$request->stok_plasma_a_negatif;
+        $hospital->stok_plasma_b_positif=$request->stok_plasma_b_positif;
+        $hospital->stok_plasma_b_negatif=$request->stok_plasma_b_negatif;
+        $hospital->stok_plasma_ab_positif=$request->stok_plasma_ab_positif;
+        $hospital->stok_plasma_ab_negatif=$request->stok_plasma_ab_negatif;
+        $hospital->stok_plasma_o_positif=$request->stok_plasma_o_positif;
+        $hospital->stok_plasma_o_negatif=$request->stok_plasma_o_negatif;
         $hospital->update();
       
         return $hospital;
@@ -111,10 +123,10 @@ class HospitalController extends Controller
      * @param  \App\Models\Hospital  $hospital
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Hospital $hospital, $id)
+    public function destroy($id)
     {
         $hospitals = Hospital::find($id);
         $hospitals->delete();
-        return view('pages.hospital.hospital-data');
+        return view('pages.hospital.hospital-data', compact('hospitals'));
     }
 }

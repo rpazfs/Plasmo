@@ -68,9 +68,10 @@ class BeritaController extends Controller
      * @param  \App\Models\Berita  $berita
      * @return \Illuminate\Http\Response
      */
-    public function edit(Berita $berita)
+    public function edit($id)
     {
-        //
+        $berita = Berita::find($id);
+        return view('pages.berita.berita-edit', compact('berita'));
     }
 
     /**
@@ -80,7 +81,7 @@ class BeritaController extends Controller
      * @param  \App\Models\Berita  $berita
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Berita $berita)
+    public function update(Request $request, $id)
     {
         $berita = Berita::find($id);
         $berita->judul_berita = $request->judul_berita;
