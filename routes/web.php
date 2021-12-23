@@ -114,14 +114,14 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::get('/berita', [ BeritaController::class, "show" ])->name('berita');
     Route::view('/berita/new', "pages.berita.berita-new")->name('berita.new');
     Route::get('/berita/edit/{beritaId}', [ BeritaController::class, "edit" ])->name('berita.edit');
-    Route::put('/berita/edit/{beritaId}', [ BeritaController::class, "update" ])->name('berita.update');
+    Route::post('/berita/edit/{beritaId}', [ BeritaController::class, "update" ])->name('berita.update');
     Route::get('/berita/delete/{beritaId}', [ BeritaController::class, "destroy" ]);
     Route::get('/berita-donor', [BeritaController::class, 'showBerita'])->name('berita');
 
     Route::get('/faq', [ FaqController::class, "show" ])->name('faq');
     Route::view('/faq/new', "pages.faq.faq-new")->name('faq.new');
     Route::get('/faq/edit/{faqId}', [ FaqController::class, "edit" ])->name('faq.edit');
-    Route::put('/faq/edit/{faqId}', [ FaqController::class, "update" ])->name('faq.update');
+    Route::post('/faq/update/{faqId}', [FaqController::class, 'update']);
     Route::get('/faq/delete/{faqId}', [ FaqController::class, "destroy" ]);
     Route::get('/faq-donor', [FaqController::class, 'showFaq'])->name('faq');
     
