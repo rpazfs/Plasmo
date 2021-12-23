@@ -42,9 +42,9 @@
                             <p class="card-text">Developer</p>
                         </div>
                         <div class="icons d-flex justify-content-center pb-5">
-                            <a><i class="fa fa-linkedin-square"></i></a>
-                            <a><i class="fa fa-github"></i></a>
-                            <a><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/figoperdana/"><i class="fa fa-linkedin-square"></i></a>
+                            <a href="https://github.com/figoperdana"><i class="fa fa-github"></i></a>
+                            <a href="https://www.instagram.com/figoperdana/"><i class="fa fa-instagram"></i></a>
                         </div>
                     </div>
                     <div class="card raja" style="width: 16rem;">
