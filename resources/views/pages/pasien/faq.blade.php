@@ -79,7 +79,9 @@
                               </li>
                             </ul>
                     </nav>
-                    <p class="align-self-center" style="font-size: 12px !important; margin-bottom: 0 !important;">Total FAQ : <span style="color: #122D74;">15</span></p>
+                    @foreach ($faqs as $data)
+                    <p class="align-self-center" style="font-size: 12px !important; margin-bottom: 0 !important;">Total FAQ : <span style="color: #122D74;">{{'$data'}}</span></p>
+                    @endforeach
                 </div>
             </article>
         </section>        
