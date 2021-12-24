@@ -77,12 +77,9 @@ class FaqController extends Controller
      */
     public function edit($id)
     {
-        $data = Faq::findOrFail($id);
-        return view('pages.faq.faq-edit', [
-        'faq' => $data
-    ]);
+        $faq = Faq::find($id);
+        return view('pages.faq.faq-edit', compact('faq'));
     }
-
 
     /**
      * Update the specified resource in storage.
@@ -91,10 +88,14 @@ class FaqController extends Controller
      * @param  \App\Models\Faq  $faq
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Faq $faq, $id)
+    public function update(Request $request, $id)
     {
-        $faq = Faq::find($id)->update($request->all());
-        return redirect('faq');
+        $faq = Faq::find($id);
+        $faq->pertanyaan = $request->pertanyaan;
+        $faq->jawaban = $request->jawaban;
+        $faq->update();
+      
+        return $faq;
     }
 
     /**
@@ -107,6 +108,6 @@ class FaqController extends Controller
     {
         $faq = Faq::find($id);
         $faq->delete();
-        return redirect('faq');
+        return view('pages.faq.faq-data');
     }
 }
